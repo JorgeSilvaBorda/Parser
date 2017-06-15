@@ -1,0 +1,14 @@
+Ayuda del programa parser de código fuente:
+
+## Para poder ejecutar el programa, se debe llamar desde la consola con el comando:
+
+java -jar Parser.jar [ayuda | (Ruta_base) | (Ruta_base log)]
+
+## Parámetros:
+
+Ruta_base: El directorio base donde se iniciará la búsqueda de los archivos.
+ayuda: Al indicar como parámetro '?' (sin las comillas), se muestra este texto.
+log: Si luego de la Ruta_base se agrega el caracter 'l', se mostrará el log de
+estado del procesamiento.
+
+--Jorge Silva Borda
