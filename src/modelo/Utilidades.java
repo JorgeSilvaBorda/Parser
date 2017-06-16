@@ -30,7 +30,7 @@ public class Utilidades {
         return texto;
     }
     
-    public LinkedList<Object> quitarRepetidos(LinkedList listado){
+    public LinkedList<String> quitarRepetidosLista(LinkedList listado){
         //Revisar algoritmo para quitar duplicados
         for(int i = 0; i < listado.size(); i++){
             Object aux = listado.get(0);
@@ -40,6 +40,16 @@ public class Utilidades {
                 }
             }
         }
-        return listado;
+        return quitarNulosLista(listado);
+    }
+    
+    public LinkedList<String> quitarNulosLista(LinkedList lista){
+        for(int i = 0; i< lista.size(); i++){
+            if(lista.get(i) == null){
+                lista.remove(i);
+                return quitarNulosLista(lista);
+            }
+        }
+        return lista;
     }
 }

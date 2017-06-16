@@ -31,7 +31,7 @@ public class ParserMake {
         String nomServer = getNombreServidor(nomVarServer);
         
         //Luego de encontrar el nombre del servidor, se busca los archivos asociados...
-        
+        getArchivosAsociados();
     }
     
     public String getNombreVarServidor(){
@@ -60,6 +60,22 @@ public class ParserMake {
         }
         //System.out.println("El nombre del servidor es: " + nombre);
         return nombre;
+    }
+    
+    public void getArchivosAsociados(){
+        //(?:[a-z][a-z]+)((_)(?:[a-z][a-z]+))?(\.)(o)
+        String patron = "(?:[a-z][a-z]+)((_)(?:[a-z][a-z]+))?(\\.)(o)";
+        Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Matcher m = p.matcher(texto);
+        LinkedList<String> lista = new LinkedList();
+        while(m.find()){
+            lista.add(m.group());
+        }
+        lista = new modelo.Utilidades().quitarRepetidosLista(lista);
+        System.out.println("Archivos asociados:");
+        for(String li : lista){
+            System.out.println(li);
+        }
     }
     
     public void setTexto(String texto){
