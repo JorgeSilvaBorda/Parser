@@ -1,5 +1,6 @@
 package controlador;
 
+import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,7 +11,7 @@ import java.util.regex.Pattern;
 public class ParserMake {
     
     private String texto;
-    
+    private LinkedList<String> archivosRelacionados = new LinkedList();
     public ParserMake(){
         
     }
