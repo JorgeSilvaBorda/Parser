@@ -26,14 +26,14 @@ public class Buscador {
                         buscar(archivo);
                     } else {
                         //Aplicar acá la lógica del momento en que se da con un archivo.
-                        log.log(archivo.getAbsolutePath());
+                        //log.log(archivo.getAbsolutePath());
                         Utilidades u = new Utilidades();
 
                         if (u.getExtension(archivo) != null) {
                             if (u.getExtension(archivo).equals("mk")) {
                                 System.out.println("Se procesa: " + archivo.getName());
                                 try {
-                                    ParserMake parM = new ParserMake(new modelo.Lector(archivo.getAbsolutePath()).getTexto());
+                                    ParserMake parM = new ParserMake(new modelo.Lector(archivo.getAbsolutePath()).getTexto(), u.getDirBase(archivo));
                                     parM.parse();
                                 } catch (IOException ex) {
                                     Logger.getLogger(Buscador.class.getName()).log(Level.SEVERE, null, ex);

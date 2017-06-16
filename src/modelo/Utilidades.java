@@ -1,5 +1,6 @@
 package modelo;
 
+import java.io.File;
 import java.util.LinkedList;
 import java.util.regex.Pattern;
 
@@ -30,13 +31,13 @@ public class Utilidades {
         return texto;
     }
     
-    public LinkedList<String> quitarRepetidosLista(LinkedList listado){
+    public LinkedList<String> quitarRepetidosLista(LinkedList<String> listado){
         //Revisar algoritmo para quitar duplicados
         for(int i = 0; i < listado.size(); i++){
-            Object aux = listado.get(0);
+            String aux = listado.get(i);
             for(int x = i+1; x < listado.size(); x++){
                 if(aux.equals(listado.get(x))){
-                    listado.set(x, null);
+                    listado.set(x, "");
                 }
             }
         }
@@ -45,11 +46,15 @@ public class Utilidades {
     
     public LinkedList<String> quitarNulosLista(LinkedList lista){
         for(int i = 0; i< lista.size(); i++){
-            if(lista.get(i) == null){
+            if(lista.get(i).equals("")){
                 lista.remove(i);
                 return quitarNulosLista(lista);
             }
         }
         return lista;
+    }
+    
+    public String getDirBase(File archivo){
+        return archivo.getParentFile().getAbsolutePath();
     }
 }
