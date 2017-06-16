@@ -12,7 +12,7 @@ public class Utilidades {
     public String getExtension(java.io.File archivo){
         if(archivo.exists() && archivo.isFile()){
             String comp[] = archivo.getName().split("\\.");
-            if(comp.length <= 1){
+            if(comp.length <= 1 && comp != null){
                 return null;
             }else{
                 return comp[comp.length - 1];
