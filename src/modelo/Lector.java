@@ -46,6 +46,7 @@ public class Lector {
                 builder.append(linea);
                 builder.append(Parametros.SEP);
             }
+            String tex = builder.toString();
             return builder.toString();
         }
         return null;

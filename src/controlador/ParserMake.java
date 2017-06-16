@@ -20,8 +20,10 @@ public class ParserMake {
     }
     
     public void parse(){
+        //Quitar los comentarios del archivo para evitar leer código comentado.
+        texto = new modelo.Utilidades().quitarComentariosMake(texto);
+        
         //Buscar el buildserver para ubicar el patrón que contiene el nombre del servidor.
-        //(buildserver)(.*)(-v)(\s+)(-o)(\s+)(\$)(\()(([a-z][a-z]+)(_?)(([a-z][a-z]+)?))(\))
         String re1 = "(buildserver)(.*)(-v)(\\s+)(-o)(\\s+)(\\$)(\\()";
         String re2 = "(([a-z][a-z]+)(_?)(([a-z][a-z]+)?))";
         String re3 = "(\\))";
@@ -34,9 +36,6 @@ public class ParserMake {
             System.out.println("El nombre de la variable del servidor es: " + varNomServer);
         }
         //Luego de encontrar el nombre de la variable que contiene el nombre del servidor, se busca dicha variable en el make.
-        //(NOMBRE_SERVIDOR)(\s*)(=)(\s*)([a-z][a-z]+(_?)([a-z][a-z]))(?=[^\n\r]*)
-        //(NOMBRE_SERVIDOR)(\\s*)(=)(\\s*)([^\\n\\r]+)
-        //((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)))
         String reg = "(NOMBRE_SERVIDOR)(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)))"; //Nombre del servidor hasta que de intro...
 
         p = Pattern.compile(reg, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
@@ -46,6 +45,9 @@ public class ParserMake {
             nombre = m.group(5);
         }
         System.out.println("El nombre del servidor es: " + nombre);
+        
+        //Luego de encontrar el nombre del servidor, se busca los archivos asociados...
+        
     }
     
     public void setTexto(String texto){

@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.regex.Pattern;
+
 /**
  * Conjunto de operaciones útiles.
  * @author Jorge Silva Borda
@@ -19,5 +21,11 @@ public class Utilidades {
             }
         }
         return null;
+    }
+    
+    public String quitarComentariosMake(String texto){
+        String patron = "(^#.*?)(?:(?:\\r*\\n){1})";
+        texto = texto.replaceAll(patron, "");
+        return texto;
     }
 }
