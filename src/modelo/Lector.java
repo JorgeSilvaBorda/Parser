@@ -44,7 +44,9 @@ public class Lector {
             StringBuilder builder = new StringBuilder();
             while((linea = br.readLine()) != null){
                 builder.append(linea);
+                builder.append(Parametros.SEP);
             }
+            String tex = builder.toString();
             return builder.toString();
         }
         return null;
