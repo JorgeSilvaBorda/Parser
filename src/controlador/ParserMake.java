@@ -55,8 +55,9 @@ public class ParserMake {
         //Preparar el MakeFile para el retorno.
         this.make = new MakeFile();
         make.setTexto(texto);
-        make.setDependencias(archivosRelacionados);
+        make.setDependencias(dependencias);
         make.setNombre(nomServer);
+        make.setGeneraServidor(!nomServer.equals(""));
         make.setRuta(rutaFull);
         make.setNombre(new File(rutaFull).getName());
         make.setNombreServer(nomServer);
@@ -155,5 +156,9 @@ public class ParserMake {
     
     public void setRutaFull(String ruta){
         this.rutaFull = ruta;
+    }
+    
+    public LinkedList<File> getDependencias(){
+        return dependencias;
     }
 }

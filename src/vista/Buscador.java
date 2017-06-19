@@ -1,5 +1,6 @@
 package vista;
 
+import controlador.ParserServer;
 import controlador.ParserMake;
 import java.io.*;
 import java.util.logging.Level;
@@ -36,6 +37,9 @@ public class Buscador {
                                     ParserMake parM = new ParserMake(new modelo.Lector(archivo.getAbsolutePath()).getTexto(), u.getDirBase(archivo));
                                     parM.setRutaFull(archivo.getAbsolutePath());
                                     MakeFile make = parM.parse(); //Esto devuelve un MakeFile con todo lo que se necesita dentro.
+                                    if(make.getGeneraServidor()){
+                                        ParserServer parseS = new ParserServer(make);
+                                    }
                                 } catch (IOException ex) {
                                     Logger.getLogger(Buscador.class.getName()).log(Level.SEVERE, null, ex);
                                 }

@@ -1,5 +1,6 @@
 package modelo;
 
+import java.io.File;
 import java.util.LinkedList;
 
 /**
@@ -7,17 +8,18 @@ import java.util.LinkedList;
  * @author Jorge Silva Borda
  */
 public class MakeFile {
-    private LinkedList<String> dependencias;
+    private LinkedList<File> dependencias;
     private String rutaBase;
     private String ruta;
     private String nombre;
     private String texto;
     private String nombreServer;
+    boolean generaServidor = false;
 
     public MakeFile() {
     }
 
-    public MakeFile(LinkedList<String> dependencias, String rutaBase, String ruta, String nombre, String texto) {
+    public MakeFile(LinkedList<File> dependencias, String rutaBase, String ruta, String nombre, String texto) {
         this.dependencias = dependencias;
         this.rutaBase = rutaBase;
         this.ruta = ruta;
@@ -25,11 +27,11 @@ public class MakeFile {
         this.texto = texto;
     }
 
-    public LinkedList<String> getDependencias() {
+    public LinkedList<File> getDependencias() {
         return dependencias;
     }
 
-    public void setDependencias(LinkedList<String> dependencias) {
+    public void setDependencias(LinkedList<File> dependencias) {
         this.dependencias = dependencias;
     }
 
@@ -71,5 +73,13 @@ public class MakeFile {
     
     public void setNombreServer(String nombre){
         this.nombreServer = nombre;
+    }
+    
+    public boolean getGeneraServidor(){
+        return generaServidor;
+    }
+    
+    public void setGeneraServidor(boolean genera){
+        this.generaServidor = genera;
     }
 }

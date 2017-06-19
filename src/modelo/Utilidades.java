@@ -2,7 +2,6 @@ package modelo;
 
 import java.io.File;
 import java.util.LinkedList;
-import java.util.regex.Pattern;
 
 /**
  * Conjunto de operaciones útiles.
@@ -27,6 +26,12 @@ public class Utilidades {
     
     public String quitarComentariosMake(String texto){
         String patron = "(^#.*?)(?:(?:\\r*\\n){1})";
+        texto = texto.replaceAll(patron, "");
+        return texto;
+    }
+    
+    public String quitarComentariosJavaC(String texto){
+        String patron = "((['\"])(?:(?!\\2|\\\\).|\\\\.)*\\2)|\\/\\/[^\\n]*|\\/\\*(?:[^*]|\\*(?!\\/))*\\*\\/";
         texto = texto.replaceAll(patron, "");
         return texto;
     }
