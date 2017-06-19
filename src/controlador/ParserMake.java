@@ -30,7 +30,7 @@ public class ParserMake {
     public MakeFile parse(){
         //Quitar los comentarios del archivo para evitar leer código comentado.
         texto = new modelo.Utilidades().quitarComentariosMake(texto);
-        System.out.println("Directorio base: " + this.rutaBase);
+        //System.out.println("Directorio base: " + this.rutaBase);
         
         //Buscar el buildserver para ubicar el patrón que contiene el nombre del servidor.
         String nomVarServer = getNombreVarServidor();
@@ -58,7 +58,12 @@ public class ParserMake {
         make.setTexto(texto);
         make.setDependencias(dependencias);
         make.setNombre(nomServer);
-        make.setGeneraServidor(!nomServer.equals(""));
+        
+        if(nomVarServer == null || nomVarServer.trim().equals("")){
+            make.setGeneraServidor(false);    
+        }else{
+            make.setGeneraServidor(true);    
+        }
         make.setRuta(rutaFull);
         make.setNombre(new File(rutaFull).getName());
         make.setNombreServer(nomServer);
@@ -88,11 +93,6 @@ public class ParserMake {
         String nombre = "";
         while(m.find()){
             nombre = m.group(5);
-        }
-        if(nombre.equals("")){
-            System.out.println("NO ES SERVIDOR");
-        }else{
-            System.out.println("Nombre servidor: " + nombre);
         }
         return nombre;
     }

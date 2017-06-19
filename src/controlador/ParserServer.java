@@ -15,7 +15,7 @@ import modelo.MakeFile;
 public class ParserServer {
     
     private String nomServer;
-    private LinkedList<String> funciones;
+    private LinkedList<String> funciones = new LinkedList();
     private MakeFile make;
     private String texto;
     private File archivoFuente = null;
@@ -45,13 +45,18 @@ public class ParserServer {
     public void parse(){
         //Preparar código sin comentarios.
         texto = new modelo.Utilidades().quitarComentariosJavaC(texto);
+        System.out.println("archivo make: " + this.make.getRuta());
+        System.out.println("Genera Servidor: " + this.make.getGeneraServidor());
+        System.out.println("Nombre servidor: " + this.getNomServer());
         
+        //System.out.println("Archivo servidor: " + this.archivoFuente.getAbsolutePath());
         //Obtener las funciones del código.
         obtenerFunciones();
     }
 
     private void obtenerFunciones(){
-        String patron = "(\\w+)(\\s+)(\\w+)(\\s*)(([(]\\s*([^)]*)\\s*[)]))\\s*[{]";
+        //String patron = "(\\w+)(\\s+)(\\w+)(\\s*)(([(]\\s*([^)]*)\\s*[)]))\\s*[{]";
+        String patron = "(void|float|char|int)(\\s+)(\\w+)(\\s*)(([(]\\s*([^)]*)\\s*[)]))\\s*[{]";
         Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);
         System.out.println("Funciones: ");
@@ -84,7 +89,5 @@ public class ParserServer {
     public void setMake(MakeFile make) {
         this.make = make;
     }
-    
-    
     
 }
