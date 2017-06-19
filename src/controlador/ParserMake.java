@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import modelo.MakeFile;
 
 /**
  * Clase para parsear los archivos Make de Tuxedo.
@@ -15,6 +16,8 @@ public class ParserMake {
     private LinkedList<String> archivosRelacionados = new LinkedList();
     private LinkedList<File> dependencias = new LinkedList();
     private String rutaBase;
+    private MakeFile make;
+    private String rutaFull;
     public ParserMake(){
         
     }
@@ -24,7 +27,7 @@ public class ParserMake {
         this.rutaBase = rutaBase;
     }
     
-    public void parse(){
+    public MakeFile parse(){
         //Quitar los comentarios del archivo para evitar leer código comentado.
         texto = new modelo.Utilidades().quitarComentariosMake(texto);
         System.out.println("Directorio base: " + this.rutaBase);
@@ -48,6 +51,17 @@ public class ParserMake {
         });
         System.out.println("");
         System.out.println("");
+        
+        //Preparar el MakeFile para el retorno.
+        this.make = new MakeFile();
+        make.setTexto(texto);
+        make.setDependencias(archivosRelacionados);
+        make.setNombre(nomServer);
+        make.setRuta(rutaFull);
+        make.setNombre(new File(rutaFull).getName());
+        make.setNombreServer(nomServer);
+        make.setRutaBase(rutaBase);
+        return make;
     }
     
     public String getNombreVarServidor(){
@@ -137,5 +151,9 @@ public class ParserMake {
     
     public void setTexto(String texto){
         this.texto = texto;
+    }
+    
+    public void setRutaFull(String ruta){
+        this.rutaFull = ruta;
     }
 }

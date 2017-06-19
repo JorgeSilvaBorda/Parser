@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Log;
+import modelo.MakeFile;
 import modelo.Parametros;
 import modelo.Utilidades;
 
@@ -25,16 +26,16 @@ public class Buscador {
                     if (archivo.isDirectory()) {
                         buscar(archivo);
                     } else {
-                        //Aplicar acá la lógica del momento en que se da con un archivo.
                         //log.log(archivo.getAbsolutePath());
                         Utilidades u = new Utilidades();
 
                         if (u.getExtension(archivo) != null) {
                             if (u.getExtension(archivo).equals("mk")) {
-                                System.out.println("Se procesa: " + archivo.getName());
+                                //System.out.println("Se procesa: " + archivo.getName());
                                 try {
                                     ParserMake parM = new ParserMake(new modelo.Lector(archivo.getAbsolutePath()).getTexto(), u.getDirBase(archivo));
-                                    parM.parse();
+                                    parM.setRutaFull(archivo.getAbsolutePath());
+                                    MakeFile make = parM.parse(); //Esto devuelve un MakeFile con todo lo que se necesita dentro.
                                 } catch (IOException ex) {
                                     Logger.getLogger(Buscador.class.getName()).log(Level.SEVERE, null, ex);
                                 }
