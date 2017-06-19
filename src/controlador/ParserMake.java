@@ -45,13 +45,14 @@ public class ParserMake {
         generarListadoReal();
         
         //Mostrar listado por consola
+        /*
         System.out.println("Archivos relacionados:");
         archivosRelacionados.forEach((archivo) -> {
             System.out.println(archivo);
         });
         System.out.println("");
         System.out.println("");
-        
+        */
         //Preparar el MakeFile para el retorno.
         this.make = new MakeFile();
         make.setTexto(texto);
@@ -97,7 +98,6 @@ public class ParserMake {
     }
     
     public void getArchivosAsociados(){
-        //(?:[a-z][a-z]+)((_)(?:[a-z][a-z]+))?(\.)(o)
         String patron = "(((\\$)(\\()(?:[a-z][a-z]+)+((_?)(?:[a-z][a-z]+))?(\\)))?(_?)(?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+))?(\\.o))|((\\$)(\\()(?:[a-z][a-z]+)+((_?)(?:[a-z][a-z]+))?(\\))(\\.o))";
         Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);

@@ -39,6 +39,7 @@ public class Buscador {
                                     MakeFile make = parM.parse(); //Esto devuelve un MakeFile con todo lo que se necesita dentro.
                                     if(make.getGeneraServidor()){
                                         ParserServer parseS = new ParserServer(make);
+                                        parseS.parse();
                                     }
                                 } catch (IOException ex) {
                                     Logger.getLogger(Buscador.class.getName()).log(Level.SEVERE, null, ex);

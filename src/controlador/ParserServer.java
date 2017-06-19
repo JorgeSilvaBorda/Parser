@@ -1,7 +1,10 @@
 package controlador;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 import modelo.MakeFile;
 
 /**
@@ -21,18 +24,19 @@ public class ParserServer {
     public ParserServer() {
     }
     
-    public ParserServer(MakeFile make){
+    public ParserServer(MakeFile make) throws IOException{
         this.make = make;
         this.nomServer = make.getNombreServer();
         this.rutaBase = make.getRutaBase();
         this.ajustarFuenteServidor();
     }
     
-    private void ajustarFuenteServidor(){
+    private void ajustarFuenteServidor() throws IOException{
         for(File dep : make.getDependencias()){
             if(dep.getName().split("\\.")[0] != null){
                 if(dep.getName().split("\\.")[0].equals(this.nomServer)){
                     this.archivoFuente = dep;
+                    this.texto = new modelo.Lector(archivoFuente.getAbsolutePath()).getTexto();
                 }
             }
         }
@@ -47,7 +51,14 @@ public class ParserServer {
     }
 
     private void obtenerFunciones(){
-        
+        String patron = "(\\w+)(\\s+)(\\w+)(\\s*)(([(]\\s*([^)]*)\\s*[)]))\\s*[{]";
+        Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Matcher m = p.matcher(texto);
+        System.out.println("Funciones: ");
+        while(m.find()){
+            System.out.println(m.group(3));
+            funciones.add(m.group(3));
+        }
     }
     
     public String getNomServer() {

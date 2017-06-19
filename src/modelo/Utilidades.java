@@ -31,9 +31,12 @@ public class Utilidades {
     }
     
     public String quitarComentariosJavaC(String texto){
-        String patron = "((['\"])(?:(?!\\2|\\\\).|\\\\.)*\\2)|\\/\\/[^\\n]*|\\/\\*(?:[^*]|\\*(?!\\/))*\\*\\/";
-        texto = texto.replaceAll(patron, "");
-        return texto;
+        if(texto != null){
+            String patron = "((['\"])(?:(?!\\2|\\\\).|\\\\.)*\\2)|\\/\\/[^\\n]*|\\/\\*(?:[^*]|\\*(?!\\/))*\\*\\/";
+            texto = texto.replaceAll(patron, "");
+            return texto;
+        }
+        return "";
     }
     
     public LinkedList<String> quitarRepetidosLista(LinkedList<String> listado){
