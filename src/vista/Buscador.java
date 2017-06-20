@@ -9,6 +9,7 @@ import modelo.Log;
 import modelo.MakeFile;
 import modelo.Parametros;
 import modelo.Utilidades;
+import org.eclipse.core.runtime.CoreException;
 
 /**
  * Clase que lee de forma recursiva dentro de un directorio.
@@ -19,7 +20,7 @@ public class Buscador {
 
     Log log = Parametros.log;
 
-    public void buscar(File arc) {
+    public void buscar(File arc) throws CoreException {
         if (arc.exists()) {
             File[] archivos = arc.listFiles();
             if (archivos != null) {

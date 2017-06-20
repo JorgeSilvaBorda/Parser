@@ -147,6 +147,7 @@ public class ParserMake {
             }
         }
         listaFinal = new modelo.Utilidades().quitarRepetidosLista(listaFinal);
+        
         archivosRelacionados = listaFinal;
     }
     

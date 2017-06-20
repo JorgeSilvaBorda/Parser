@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import modelo.Parametros;
+import org.eclipse.core.runtime.CoreException;
 
 /**
  * Clase principal que perpetra el recorrido de los archivos.
@@ -13,7 +14,7 @@ public class Main {
 
     private static final String SEP = modelo.Parametros.SEP;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CoreException {
         if (procesaArgumentos(args) == 0) {
             Buscador b = new Buscador();
             b.buscar(new File(args[0]));
