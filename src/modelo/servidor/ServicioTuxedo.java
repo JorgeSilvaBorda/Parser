@@ -6,19 +6,19 @@ import java.util.LinkedList;
  * Objeto representativo de un servicio Tuxedo.
  * @author Jorge Silva Borda
  */
-public class Servicio {
+public class ServicioTuxedo {
     private String nombre;
-    private LinkedList<Servicio> llamadosServicios;
+    private LinkedList<ServicioTuxedo> llamadosServicios;
     
-    public Servicio(){
+    public ServicioTuxedo(){
         llamadosServicios = new LinkedList();
     }
     
-    public Servicio(String nombre){
+    public ServicioTuxedo(String nombre){
         this.nombre = nombre;
     }
     
-    public void addLlamado(Servicio servicio){
+    public void addLlamado(ServicioTuxedo servicio){
         
     }
 }

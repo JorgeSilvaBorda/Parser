@@ -38,7 +38,6 @@ import org.eclipse.core.runtime.CoreException;
 /**
  * Clase para parsear los servidores Tuxedo y ubicar todas las funciones
  * internas.
- *
  * @author Jorge Silva Borda
  */
 public class ParserServer {
@@ -122,16 +121,11 @@ public class ParserServer {
         }
     };
 
-    public ParserServer() {
-        dependencias = new LinkedList();
-    }
-
     public ParserServer(MakeFile make) throws IOException {
         this.make = make;
         this.nomServer = make.getNombreServer();
         this.rutaBase = make.getRutaBase();
-        dependencias = new LinkedList();
-        cargarDependencias();
+        dependencias = cargarDependencias();
         this.ajustarFuenteServidor();
     }
 
@@ -151,7 +145,6 @@ public class ParserServer {
         texto = new modelo.Utilidades().quitarComentariosJavaC(texto);
 
         //Obtener las funciones del código.
-        obtenerFunciones();
         System.out.println("Archivo servidor: " + this.archivoFuente.getAbsolutePath());
 
         //Para el proceso de los archivos fuentes.
@@ -209,20 +202,8 @@ public class ParserServer {
         }
     }
 
-    private void obtenerFunciones() {
-        //String patron = "(\\w+)(\\s+)(\\w+)(\\s*)(([(]\\s*([^)]*)\\s*[)]))\\s*[{]";
-        String patron = "(void|float|char|int)(\\s+)(\\w+)(\\s*)(([(]\\s*([^)]*)\\s*[)]))\\s*[{]";
-        Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
-        Matcher m = p.matcher(texto);
-        //System.out.println("Funciones: ");
-        while (m.find()) {
-            //System.out.println(m.group(3));
-            funciones.add(m.group(3));
-        }
-    }
-
-    public void cargarDependencias() {
-        dependencias = make.getDependencias();
+    public LinkedList<File> cargarDependencias() {
+        return make.getDependencias();
     }
 
     public String getNomServer() {

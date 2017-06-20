@@ -37,7 +37,6 @@ public class ParserMake {
         
         //Luego de encontrar el nombre de la variable que contiene el nombre del servidor, se busca dicha variable en el make.
         String nomServer = getNombreServidor(nomVarServer);
-        
         //Luego de encontrar el nombre del servidor, se busca los archivos asociados...
         getArchivosAsociados();
         
@@ -86,14 +85,16 @@ public class ParserMake {
     }
     
     public String getNombreServidor(String nomVarServer){
-        String reg = "(" + nomVarServer + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)))"; //Nombre del servidor hasta que de intro...
-
+        //String reg = "(" + nomVarServer + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)))"; //Nombre del servidor hasta que de intro...
+        String reg = "(" + nomVarServer + ")(\\s?)(=)(\\s?)((?:[a-z]+))(_?(?:[a-z]+))+"; //Nombre del servidor hasta que de intro...
         Pattern p = Pattern.compile(reg, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);
         String nombre = "";
+        System.out.println("Patron a buscar: " + p);
         while(m.find()){
-            nombre = m.group(5);
+            nombre = m.group(5) + m.group(6);
         }
+        System.out.println("Nombre servidor: " + nombre);
         return nombre;
     }
     
@@ -116,7 +117,7 @@ public class ParserMake {
     public String obtenerNombreDesdeVariable(String nomConVariable){
         String nomvar = nomConVariable.replace("$(", "");
         String[] arr = nomvar.split("\\)");
-        String patron = "(" + arr[0] + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)))";
+        String patron = "(" + arr[0] + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)?))";
         Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);
         while(m.find()){
@@ -147,7 +148,6 @@ public class ParserMake {
             }
         }
         listaFinal = new modelo.Utilidades().quitarRepetidosLista(listaFinal);
-        
         archivosRelacionados = listaFinal;
     }
     

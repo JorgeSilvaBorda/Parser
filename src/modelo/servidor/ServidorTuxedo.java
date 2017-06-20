@@ -7,33 +7,33 @@ import java.util.LinkedList;
  * Objeto representativo de servidor Tuxedo
  * @author Jorge Silva Borda
  */
-public class Servidor {
+public class ServidorTuxedo {
     private String nombre;
-    private LinkedList<Servicio> serviciosExpuestos;
+    private LinkedList<ServicioTuxedo> serviciosExpuestos;
     private File archivoFuente;
     private LinkedList<File> dependencias;
     
-    public Servidor(){
+    public ServidorTuxedo(){
         serviciosExpuestos = new LinkedList();
         dependencias = new LinkedList();
         this.archivoFuente = null;
     }
     
-    public Servidor(String nombre){
+    public ServidorTuxedo(String nombre){
         this.nombre = nombre;
         serviciosExpuestos = new LinkedList();
         dependencias = new LinkedList();
         this.archivoFuente = null;
     }
     
-    public Servidor(String nombre, File archivoFuente){
+    public ServidorTuxedo(String nombre, File archivoFuente){
         this.nombre = nombre;
         this.archivoFuente = archivoFuente;
         serviciosExpuestos = new LinkedList();
         dependencias = new LinkedList();
     }
     
-    public void addServicio(Servicio servicio){
+    public void addServicio(ServicioTuxedo servicio){
         this.serviciosExpuestos.add(servicio);
     }
     
@@ -45,7 +45,7 @@ public class Servidor {
         return dependencias;
     }
     
-    public LinkedList<Servicio> getServicios(){
+    public LinkedList<ServicioTuxedo> getServicios(){
         return serviciosExpuestos;
     }
     

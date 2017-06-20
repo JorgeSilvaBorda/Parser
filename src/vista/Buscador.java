@@ -13,7 +13,6 @@ import org.eclipse.core.runtime.CoreException;
 
 /**
  * Clase que lee de forma recursiva dentro de un directorio.
- *
  * @author Jorge Silva Borda
  */
 public class Buscador {
@@ -33,12 +32,13 @@ public class Buscador {
 
                         if (u.getExtension(archivo) != null) {
                             if (u.getExtension(archivo).equals("mk")) {
-                                //System.out.println("Se procesa: " + archivo.getName());
+                                System.out.println("Se procesa make: " + archivo.getAbsolutePath());
                                 try {
                                     ParserMake parM = new ParserMake(new modelo.Lector(archivo.getAbsolutePath()).getTexto(), u.getDirBase(archivo));
                                     parM.setRutaFull(archivo.getAbsolutePath());
                                     MakeFile make = parM.parse(); //Esto devuelve un MakeFile con todo lo que se necesita dentro.
                                     if(make.getGeneraServidor()){
+                                        
                                         ParserServer parseS = new ParserServer(make);
                                         parseS.parse();
                                     }
