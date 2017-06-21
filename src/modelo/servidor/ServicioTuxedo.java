@@ -17,6 +17,7 @@ public class ServicioTuxedo {
     
     public ServicioTuxedo(String nombre){
         this.nombre = nombre;
+        funciones = new LinkedList();
     }
     
     public void addLlamado(Funcion funcion){

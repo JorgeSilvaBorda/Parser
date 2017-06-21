@@ -185,10 +185,9 @@ public final class ParserServer {
 
             //translationUnit.accept(visitor);
             recorrerArbol(translationUnit, 1);
-            funciones = armarFunciones(objetos);
+            funciones = armarFunciones2(objetos);
             //mostrarFunciones(funciones);
         }
-        
         return construirServidor();
     }
 
@@ -217,7 +216,7 @@ public final class ParserServer {
         if (!node.getClass().getSimpleName().equals("CPPASTTranslationUnit")) {
             if (node.getClass().getSimpleName().equals("CPPASTFunctionDeclarator")
                     || node.getClass().getSimpleName().equals("CPPASTFunctionCallExpression")
-                    || node.getClass().getSimpleName().equals("CPPASTName")) {
+                    /*|| node.getClass().getSimpleName().equals("CPPASTName")*/) {
                 //System.out.print(index + ":");
                 //System.out.println(String.format(new StringBuilder("%1$").append(index * 2).append("s").toString(), new Object[]{"-"}) + node.getClass().getSimpleName() + offset + " -> " + (printContents ? node.getRawSignature().replaceAll("\n", " \\ ") : node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength())));
                 Object[] objeto = new Object[2];
@@ -232,6 +231,7 @@ public final class ParserServer {
                         }
                         objeto[0] = f;
                         objeto[1] = index;
+
                         objetos.add(objeto);
                         break;
                     case "CPPASTFunctionCallExpression":
@@ -260,12 +260,33 @@ public final class ParserServer {
 
             for (int i = 1; i < objetos.size(); i++) {
                 if ((int) objetos.get(i)[1] > indice) {
-                    funcs.get(actual).addLlamado((Funcion) objetos.get(i)[0]);
+                    if(!funcs.contains((Funcion) objetos.get(i)[0])){
+                        funcs.get(actual).addLlamado((Funcion) objetos.get(i)[0]);
+                    }
                 } else {
-                    funcs.add((Funcion) objetos.get(i)[0]);
-                    actual++;
+                    if(!funcs.contains((Funcion) objetos.get(i)[0])){
+                        funcs.add((Funcion) objetos.get(i)[0]);
+                        actual++;
+                    }
                 }
                 indice = (int) objetos.get(i)[1];
+            }
+        }
+        return funcs;
+    }
+    
+    public LinkedList<Funcion> armarFunciones2(LinkedList<Object[]> objetos){
+        int funActual = -1;
+        int index = (int)objetos.get(0)[1];
+        LinkedList<Funcion> funcs = new LinkedList();
+        for(Object[] obj : objetos){
+            if(((Funcion)obj[0]).getTipo().equals("Declara")){
+                funcs.add((Funcion)obj[0]);
+                funActual++;
+            }else{
+                if(!funcs.get(funActual).getLlamados().contains((Funcion)obj[0])){
+                    funcs.get(funActual).addLlamado((Funcion)obj[0]);
+                }
             }
         }
         return funcs;
@@ -281,13 +302,22 @@ public final class ParserServer {
             if(f.getEsServicio()){
                 ServicioTuxedo servicio = new ServicioTuxedo();
                 servicio.setNombre(f.getNombre());
+                
                 if(f.getLlamados().size() > 0){
                     for(Funcion llam : f.getLlamados()){
-                        servicio.addLlamado(llam);
+                        if(!servicio.getFunciones().contains(llam)){
+                            servicio.addLlamado(llam);
+                        }
                     }
                 }
+                if(!servidor.getServicios().contains(servicio)){
+                    servidor.addServicio(servicio);
+                }
+                
             }else{
-                servidor.addFuncion(f);
+                if(!servidor.getFunciones().contains(f)){
+                    servidor.addFuncion(f);
+                }
             }
         }
         return servidor;
