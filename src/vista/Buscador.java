@@ -9,6 +9,7 @@ import modelo.Log;
 import modelo.MakeFile;
 import modelo.Parametros;
 import modelo.Utilidades;
+import modelo.servidor.ServidorTuxedo;
 import org.eclipse.core.runtime.CoreException;
 
 /**
@@ -38,9 +39,11 @@ public class Buscador {
                                     parM.setRutaFull(archivo.getAbsolutePath());
                                     MakeFile make = parM.parse(); //Esto devuelve un MakeFile con todo lo que se necesita dentro.
                                     if(make.getGeneraServidor()){
-                                        
+                                        System.out.println("El archivo fuente del servidor: " + make.getArchivoFuenteServidor().getAbsolutePath());
                                         ParserServer parseS = new ParserServer(make);
-                                        parseS.parse();
+                                        ServidorTuxedo servidor = parseS.parse();
+                                        servidor.setArchivoFuente(make.getArchivoFuenteServidor());;
+                                        System.out.println(servidor);
                                     }
                                 } catch (IOException ex) {
                                     Logger.getLogger(Buscador.class.getName()).log(Level.SEVERE, null, ex);

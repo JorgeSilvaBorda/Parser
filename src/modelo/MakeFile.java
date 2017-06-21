@@ -14,7 +14,9 @@ public class MakeFile {
     private String nombre;
     private String texto;
     private String nombreServer;
+    private File archivoFuenteServidor;
     boolean generaServidor = false;
+    
 
     public MakeFile() {
     }
@@ -81,5 +83,13 @@ public class MakeFile {
     
     public void setGeneraServidor(boolean genera){
         this.generaServidor = genera;
+    }
+    
+    public void setArchivoFuenteServidor(File archivo){
+        this.archivoFuenteServidor = archivo;
+    }
+    
+    public File getArchivoFuenteServidor(){
+        return archivoFuenteServidor;
     }
 }

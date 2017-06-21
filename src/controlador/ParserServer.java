@@ -5,14 +5,16 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 import modelo.MakeFile;
+import modelo.servidor.ServicioTuxedo;
+import modelo.servidor.ServidorTuxedo;
+import modelo.servidor.dependencia.Funcion;
 import org.eclipse.cdt.core.dom.ast.ASTVisitor;
 import org.eclipse.cdt.core.dom.ast.DOMException;
 import org.eclipse.cdt.core.dom.ast.ExpansionOverlapsBoundaryException;
 import org.eclipse.cdt.core.dom.ast.IASTAttribute;
 import org.eclipse.cdt.core.dom.ast.IASTDeclaration;
+import org.eclipse.cdt.core.dom.ast.IASTFunctionCallExpression;
 import org.eclipse.cdt.core.dom.ast.IASTDeclarator;
 import org.eclipse.cdt.core.dom.ast.IASTFunctionDefinition;
 import org.eclipse.cdt.core.dom.ast.IASTName;
@@ -31,6 +33,7 @@ import org.eclipse.cdt.core.parser.IParserLogService;
 import org.eclipse.cdt.core.parser.IScannerInfo;
 import org.eclipse.cdt.core.parser.IncludeFileContentProvider;
 import org.eclipse.cdt.core.parser.ScannerInfo;
+import org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionCallExpression;
 import org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDeclarator;
 import org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTTranslationUnit;
 import org.eclipse.core.runtime.CoreException;
@@ -38,12 +41,13 @@ import org.eclipse.core.runtime.CoreException;
 /**
  * Clase para parsear los servidores Tuxedo y ubicar todas las funciones
  * internas.
+ *
  * @author Jorge Silva Borda
  */
-public class ParserServer {
+public final class ParserServer {
 
     private String nomServer;
-    private LinkedList<String> funciones = new LinkedList();
+    private LinkedList<Funcion> funciones = new LinkedList();
     private MakeFile make;
     private String texto;
     private File archivoFuente = null;
@@ -53,7 +57,7 @@ public class ParserServer {
     ASTVisitor visitor = new ASTVisitor() {//Objeto que recorre
         @Override
         public int visit(IASTName name) {
-            if ((name.getParent() instanceof CPPASTFunctionDeclarator)) {
+            if ((name.getParent() instanceof CPPASTFunctionDeclarator || name.getParent() instanceof CPPASTFunctionCallExpression)) {
                 System.out.println(name.getClass().getSimpleName() + " " + name.getRawSignature() + " " + name.getParent().getClass().getSimpleName());
             }
             return 3;
@@ -65,53 +69,58 @@ public class ParserServer {
 
             if ((declaration instanceof IASTSimpleDeclaration)) {
                 IASTSimpleDeclaration ast = (IASTSimpleDeclaration) declaration;
-                try {
-                    System.out.println(ast.getSyntax().toString() + " " + ast.getChildren().length);
+                //try {
+                    //System.out.println(ast.getSyntax().toString() + " " + ast.getChildren().length);
                     IASTNode typedef = ast.getChildren().length == 1 ? ast.getChildren()[0] : ast.getChildren()[1];
-                    System.out.println(typedef);
+                    //System.out.println(typedef);
                     IASTNode[] children = typedef.getChildren();
                     if ((children != null) && (children.length > 0)) {
-                        System.out.println(children[0].getRawSignature());
+                        //System.out.println(children[0].getRawSignature());
                     }
-                } catch (ExpansionOverlapsBoundaryException e) {
-                    System.out.println("Error: " + e);
-                }
+                //} catch (ExpansionOverlapsBoundaryException e) {
+                    //System.out.println("Error: " + e);
+                //}
 
                 IASTDeclarator[] declarators = ast.getDeclarators();
                 for (IASTDeclarator iastDeclarator : declarators) {
-                    System.out.println(iastDeclarator.getName());
+                    //System.out.println(iastDeclarator.getName());
                 }
 
                 IASTAttribute[] attributes = ast.getAttributes();
                 for (IASTAttribute iastAttribute : attributes) {
-                    System.out.println(iastAttribute);
+                    //System.out.println(iastAttribute);
                 }
             }
 
             if ((declaration instanceof IASTFunctionDefinition)) {
                 IASTFunctionDefinition ast = (IASTFunctionDefinition) declaration;
                 IScope scope = ast.getScope();
-                try {
-                    System.out.println(scope.getParent().getScopeName());
-                    System.out.println(ast.getSyntax());
-                } catch (DOMException | ExpansionOverlapsBoundaryException e) {
-                    System.out.println("Error: " + e);
-                }
+                //try {
+                    //System.out.println(scope.getParent().getScopeName());
+                    //System.out.println(ast.getSyntax());
+                //} catch (DOMException | ExpansionOverlapsBoundaryException e) {
+                    //System.out.println("Error: " + e);
+                //}
                 ICPPASTFunctionDeclarator typedef = (ICPPASTFunctionDeclarator) ast.getDeclarator();
-                System.out.println(typedef.getName());
+                //System.out.println(typedef.getName());
             }
+            return 3;
+        }
+
+        public int visit(IASTFunctionCallExpression call) {
+            //System.out.println(call + " " + call.getRawSignature());
             return 3;
         }
 
         @Override
         public int visit(IASTTypeId typeId) {
-            System.out.println(typeId.getRawSignature());
+            //System.out.println(typeId.getRawSignature());
             return 3;
         }
 
         @Override
         public int visit(IASTStatement statement) {
-            System.out.println(statement.getRawSignature());
+            //System.out.println(statement.getRawSignature());
             return 3;
         }
 
@@ -127,6 +136,7 @@ public class ParserServer {
         this.rutaBase = make.getRutaBase();
         dependencias = cargarDependencias();
         this.ajustarFuenteServidor();
+        this.archivoFuente = make.getArchivoFuenteServidor();
     }
 
     private void ajustarFuenteServidor() throws IOException {
@@ -140,12 +150,12 @@ public class ParserServer {
         }
     }
 
-    public void parse() throws CoreException {
+    public ServidorTuxedo parse() throws CoreException {
         //Preparar código sin comentarios.
         texto = new modelo.Utilidades().quitarComentariosJavaC(texto);
 
         //Obtener las funciones del código.
-        System.out.println("Archivo servidor: " + this.archivoFuente.getAbsolutePath());
+        //System.out.println("Archivo servidor: " + this.archivoFuente.getAbsolutePath());
 
         //Para el proceso de los archivos fuentes.
         for (File dependencia : dependencias) {
@@ -162,23 +172,32 @@ public class ParserServer {
             IASTTranslationUnit translationUnit = GPPLanguage.getDefault().getASTTranslationUnit(fileContent, info, emptyIncludes, null, opts, log);
             IASTPreprocessorIncludeStatement[] includes = translationUnit.getIncludeDirectives();
             for (IASTPreprocessorIncludeStatement include : includes) {
-                System.out.println("include - " + include.getName());
+                //System.out.println("include - " + include.getName());
             }
             //recorrerArbol(translationUnit, 1);
             visitor.shouldVisitNames = true;
             visitor.shouldVisitDeclarations = false;
+
             visitor.shouldVisitDeclarators = true;
             visitor.shouldVisitAttributes = true;
             visitor.shouldVisitStatements = false; //Muestra el código de las declaraciones.
             visitor.shouldVisitTypeIds = false;
 
-            translationUnit.accept(visitor);
+            //translationUnit.accept(visitor);
+            recorrerArbol(translationUnit, 1);
+            funciones = armarFunciones(objetos);
+            //mostrarFunciones(funciones);
         }
+        
+        return construirServidor();
     }
+
+    LinkedList<Object[]> objetos = new LinkedList();
 
     private void recorrerArbol(IASTNode node, int index) {
         IASTNode[] children = node.getChildren();
-
+        Funcion f;
+        String nombre;
         boolean printContents = true;
 
         if ((node instanceof CPPASTTranslationUnit)) {
@@ -195,11 +214,83 @@ public class ParserServer {
             offset = "UnsupportedOperationException";
         }
 
-        System.out.println(String.format(new StringBuilder("%1$").append(index * 2).append("s").toString(), new Object[]{"-"}) + node.getClass().getSimpleName() + offset + " -> " + (printContents ? node.getRawSignature().replaceAll("\n", " \\ ") : node.getRawSignature().subSequence(0, 5)));
+        if (!node.getClass().getSimpleName().equals("CPPASTTranslationUnit")) {
+            if (node.getClass().getSimpleName().equals("CPPASTFunctionDeclarator")
+                    || node.getClass().getSimpleName().equals("CPPASTFunctionCallExpression")
+                    || node.getClass().getSimpleName().equals("CPPASTName")) {
+                //System.out.print(index + ":");
+                //System.out.println(String.format(new StringBuilder("%1$").append(index * 2).append("s").toString(), new Object[]{"-"}) + node.getClass().getSimpleName() + offset + " -> " + (printContents ? node.getRawSignature().replaceAll("\n", " \\ ") : node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength())));
+                Object[] objeto = new Object[2];
+                switch (node.getClass().getSimpleName()) {
+                    case "CPPASTFunctionDeclarator":
+                        nombre = node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\\(")[0];
+                        f = new Funcion(nombre, "Declara");
+                        if(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\\(")[1].contains("TPSVCINFO")){
+                            f.setEsServicio(true);
+                        }else{
+                            f.setEsServicio(false);
+                        }
+                        objeto[0] = f;
+                        objeto[1] = index;
+                        objetos.add(objeto);
+                        break;
+                    case "CPPASTFunctionCallExpression":
+                        nombre = node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\\(")[0];
+                        f = new Funcion(nombre, "Llama");
+                        objeto[0] = f;
+                        objeto[1] = index;
+                        objetos.add(objeto);
+                        break;
+                }
+            }
+        }
 
         for (IASTNode iastNode : children) {
             recorrerArbol(iastNode, index + 1);
         }
+    }
+
+    public LinkedList<Funcion> armarFunciones(LinkedList<Object[]> objetos) {
+        LinkedList<Funcion> funcs = new LinkedList();
+        if (objetos.size() > 0) {
+            Funcion funcion;
+            int actual = 0;
+            int indice = (int) objetos.get(0)[1];
+            funcs.add((Funcion) objetos.get(0)[0]);
+
+            for (int i = 1; i < objetos.size(); i++) {
+                if ((int) objetos.get(i)[1] > indice) {
+                    funcs.get(actual).addLlamado((Funcion) objetos.get(i)[0]);
+                } else {
+                    funcs.add((Funcion) objetos.get(i)[0]);
+                    actual++;
+                }
+                indice = (int) objetos.get(i)[1];
+            }
+        }
+        return funcs;
+    }
+    
+    public ServidorTuxedo construirServidor(){
+        ServidorTuxedo servidor = new ServidorTuxedo();
+        servidor.setNombre(nomServer);
+        for(File dependencia : dependencias){
+            servidor.addDependencia(dependencia);
+        }
+        for(Funcion f : funciones){
+            if(f.getEsServicio()){
+                ServicioTuxedo servicio = new ServicioTuxedo();
+                servicio.setNombre(f.getNombre());
+                if(f.getLlamados().size() > 0){
+                    for(Funcion llam : f.getLlamados()){
+                        servicio.addLlamado(llam);
+                    }
+                }
+            }else{
+                servidor.addFuncion(f);
+            }
+        }
+        return servidor;
     }
 
     public LinkedList<File> cargarDependencias() {
@@ -214,11 +305,11 @@ public class ParserServer {
         this.nomServer = nomServer;
     }
 
-    public LinkedList<String> getFunciones() {
+    public LinkedList<Funcion> getFunciones() {
         return funciones;
     }
 
-    public void setFunciones(LinkedList<String> funciones) {
+    public void setFunciones(LinkedList<Funcion> funciones) {
         this.funciones = funciones;
     }
 
@@ -228,6 +319,18 @@ public class ParserServer {
 
     public void setMake(MakeFile make) {
         this.make = make;
+    }
+
+    //Método de pruebas:
+    public void mostrarFunciones(LinkedList<Funcion> funcs) {
+        for (Funcion f : funcs) {
+            System.out.println("Funcion: " + f.getNombre() + " - Llamados: " + f.getLlamados().size() + " Es servicio?: " + f.getEsServicio());
+            if (f.getLlamados().size() >= 1) {
+                for (Funcion llam : f.getLlamados()) {
+                    System.out.println("    -Llamado: " + llam.getNombre());
+                }
+            }
+        }
     }
 
 }
