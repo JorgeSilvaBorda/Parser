@@ -18,6 +18,8 @@ public class ParserMake {
     private String rutaBase;
     private MakeFile make;
     private String rutaFull;
+    private File archivoFuenteServidor;
+    private String nombreServidor;
     public ParserMake(){
         
     }
@@ -37,6 +39,7 @@ public class ParserMake {
         
         //Luego de encontrar el nombre de la variable que contiene el nombre del servidor, se busca dicha variable en el make.
         String nomServer = getNombreServidor(nomVarServer);
+        nombreServidor = nomServer;
         //Luego de encontrar el nombre del servidor, se busca los archivos asociados...
         getArchivosAsociados();
         
@@ -67,6 +70,14 @@ public class ParserMake {
         make.setNombre(new File(rutaFull).getName());
         make.setNombreServer(nomServer);
         make.setRutaBase(rutaBase);
+        make.setArchivoFuenteServidor(archivoFuenteServidor);
+        for(File dep : dependencias){
+            if(dep.getName().contains(".")){
+                if(dep.getName().split("\\.")[0].equals(nombreServidor)){
+                    make.setArchivoFuenteServidor(dep);
+                }
+            }
+        }
         return make;
     }
     
@@ -85,16 +96,13 @@ public class ParserMake {
     }
     
     public String getNombreServidor(String nomVarServer){
-        //String reg = "(" + nomVarServer + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)))"; //Nombre del servidor hasta que de intro...
         String reg = "(" + nomVarServer + ")(\\s?)(=)(\\s?)((?:[a-z]+))(_?(?:[a-z]+))+"; //Nombre del servidor hasta que de intro...
         Pattern p = Pattern.compile(reg, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);
         String nombre = "";
-        System.out.println("Patron a buscar: " + p);
         while(m.find()){
             nombre = m.group(5) + m.group(6);
         }
-        System.out.println("Nombre servidor: " + nombre);
         return nombre;
     }
     
@@ -145,10 +153,18 @@ public class ParserMake {
                     listaFinal.add(nomArchivo);
                     dependencias.add(ar);
                 }
+                
+                if(nombreServidor.equals(nomC)){
+                    this.archivoFuenteServidor = ar;
+                }
             }
         }
         listaFinal = new modelo.Utilidades().quitarRepetidosLista(listaFinal);
         archivosRelacionados = listaFinal;
+    }
+    
+    public File getArchivoFuenteServidor(){
+        return archivoFuenteServidor;
     }
     
     public void setTexto(String texto){

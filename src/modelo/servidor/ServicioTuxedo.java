@@ -1,6 +1,7 @@
 package modelo.servidor;
 
 import java.util.LinkedList;
+import modelo.servidor.dependencia.Funcion;
 
 /**
  * Objeto representativo de un servicio Tuxedo.
@@ -8,17 +9,29 @@ import java.util.LinkedList;
  */
 public class ServicioTuxedo {
     private String nombre;
-    private LinkedList<ServicioTuxedo> llamadosServicios;
+    private LinkedList<Funcion> funciones;
     
     public ServicioTuxedo(){
-        llamadosServicios = new LinkedList();
+        funciones = new LinkedList();
     }
     
     public ServicioTuxedo(String nombre){
         this.nombre = nombre;
     }
     
-    public void addLlamado(ServicioTuxedo servicio){
-        
+    public void addLlamado(Funcion funcion){
+        funciones.add(funcion);
+    }
+    
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public String getNombre(){
+        return nombre;
+    }
+    
+    public LinkedList<Funcion> getFunciones(){
+        return funciones;
     }
 }
