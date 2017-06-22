@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 /**
  * Objeto representativo de una función.
- *
  * @author Jorge Silva Borda
  */
 public class Funcion {

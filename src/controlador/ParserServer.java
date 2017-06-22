@@ -186,7 +186,6 @@ public final class ParserServer {
             //translationUnit.accept(visitor);
             recorrerArbol(translationUnit, 1);
             funciones = armarFunciones2(objetos);
-            //mostrarFunciones(funciones);
         }
         return construirServidor();
     }
@@ -284,7 +283,7 @@ public final class ParserServer {
                 funcs.add((Funcion)obj[0]);
                 funActual++;
             }else{
-                if(!funcs.get(funActual).getLlamados().contains((Funcion)obj[0])){
+                if(!new modelo.Utilidades().existeEnLista((Funcion)obj[0], funcs.get(funActual).getLlamados())){
                     funcs.get(funActual).addLlamado((Funcion)obj[0]);
                 }
             }
@@ -305,7 +304,8 @@ public final class ParserServer {
                 
                 if(f.getLlamados().size() > 0){
                     for(Funcion llam : f.getLlamados()){
-                        if(!servicio.getFunciones().contains(llam)){
+                        
+                        if(!new modelo.Utilidades().existeEnLista(llam, servicio.getFunciones())){
                             servicio.addLlamado(llam);
                         }
                     }
@@ -315,11 +315,12 @@ public final class ParserServer {
                 }
                 
             }else{
-                if(!servidor.getFunciones().contains(f)){
+                if(!new modelo.Utilidades().existeEnLista(f, servidor.getFunciones())){
                     servidor.addFuncion(f);
                 }
             }
         }
+        
         return servidor;
     }
 

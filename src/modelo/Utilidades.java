@@ -65,4 +65,13 @@ public class Utilidades {
     public String getDirBase(File archivo){
         return archivo.getParentFile().getAbsolutePath();
     }
+    
+    public boolean existeEnLista(Object o, LinkedList lista){
+        for(Object objeto : lista){
+            if(objeto.toString().equals(o.toString())){
+                return true;
+            }
+        }
+        return false;
+    }
 }
