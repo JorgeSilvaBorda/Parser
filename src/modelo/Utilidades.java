@@ -2,7 +2,6 @@ package modelo;
 
 import java.io.File;
 import java.util.LinkedList;
-import java.util.regex.Pattern;
 
 /**
  * Conjunto de operaciones útiles.
@@ -31,6 +30,15 @@ public class Utilidades {
         return texto;
     }
     
+    public String quitarComentariosJavaC(String texto){
+        if(texto != null){
+            String patron = "((['\"])(?:(?!\\2|\\\\).|\\\\.)*\\2)|\\/\\/[^\\n]*|\\/\\*(?:[^*]|\\*(?!\\/))*\\*\\/";
+            texto = texto.replaceAll(patron, "");
+            return texto;
+        }
+        return "";
+    }
+    
     public LinkedList<String> quitarRepetidosLista(LinkedList<String> listado){
         //Revisar algoritmo para quitar duplicados
         for(int i = 0; i < listado.size(); i++){
@@ -56,5 +64,14 @@ public class Utilidades {
     
     public String getDirBase(File archivo){
         return archivo.getParentFile().getAbsolutePath();
+    }
+    
+    public boolean existeEnLista(Object o, LinkedList lista){
+        for(Object objeto : lista){
+            if(objeto.toString().equals(o.toString())){
+                return true;
+            }
+        }
+        return false;
     }
 }
