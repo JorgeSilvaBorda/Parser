@@ -21,12 +21,12 @@ public class ParserSQL {
         if (variable.contains("*")) {
             variable = variable.split("\\*")[1];
         }
-        System.out.print("Variable: " + variable);
+        //System.out.print("Variable: " + variable);
         Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(nodo);
 
         while (m.find()) {
-            System.out.println(" Tiene query");
+            //System.out.println(" Tiene query");
             buscarTablas(m.group());
         }
     }
@@ -41,7 +41,7 @@ public class ParserSQL {
         Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(nodo);
         while (m.find()) {
-            System.out.println(" Tiene query");
+            //System.out.println(" Tiene query");
             buscarTablas(m.group());
         }
     }
@@ -59,7 +59,7 @@ public class ParserSQL {
         query = emparejarTexto(query);
         query = query + ";";
 
-        System.out.println(query);
-        System.out.println("Query: " + query);
+        //System.out.println(query);
+        //System.out.println("Query: " + query);
     }
 }

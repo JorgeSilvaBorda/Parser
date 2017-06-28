@@ -96,7 +96,7 @@ public class ParserMake {
     }
     
     public String getNombreServidor(String nomVarServer){
-        String reg = "(" + nomVarServer + ")(\\s?)(=)(\\s?)((?:[a-z]+))(_?(?:[a-z]+))+"; //Nombre del servidor hasta que de intro...
+        String reg = "(" + nomVarServer + ")(\\s?)(=)(\\s?)((?:[a-z]+))(_?(?:[a-z]+)|(?:[0-9]+))+"; //Nombre del servidor hasta que de intro...
         Pattern p = Pattern.compile(reg, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);
         String nombre = "";
@@ -108,7 +108,8 @@ public class ParserMake {
     
     public void getArchivosAsociados(){
         String patron = "(((\\$)(\\()(?:[a-z][a-z]+)+((_?)(?:[a-z][a-z]+))?(\\)))?(_?)(?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+))?(\\.o))|((\\$)(\\()(?:[a-z][a-z]+)+((_?)(?:[a-z][a-z]+))?(\\))(\\.o))";
-        Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        String patronSegundo = "|(((?:[a-z]+)|(?:[0-9]+))((_?)((?:[a-z]+)|(?:[0-9]+)))+(\\.o+))";
+        Pattern p = Pattern.compile(patron + patronSegundo, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);
         LinkedList<String> lista = new LinkedList();
         while(m.find()){
@@ -125,11 +126,15 @@ public class ParserMake {
     public String obtenerNombreDesdeVariable(String nomConVariable){
         String nomvar = nomConVariable.replace("$(", "");
         String[] arr = nomvar.split("\\)");
-        String patron = "(" + arr[0] + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)?))";
+        //(\s?)(=)(\s?)((?:[a-z][a-z]+(?:[0-9]+)?)((_?)(?:[a-z]+)?))
+        //String patron = "(" + arr[0] + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+)((_?)(?:[a-z][a-z]+)?|(?:[0-9]+)))";
+        String patron = "(" + arr[0] + ")(\\s?)(=)(\\s?)((?:[a-z][a-z]+(?:[0-9]+)?)((_?)(?:[a-z]+)?))";
+
         Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(texto);
+        
         while(m.find()){
-            return m.group(5) + arr[1];
+            return m.group(5);
         }
         return "";
     }
@@ -143,7 +148,9 @@ public class ParserMake {
                 String nomArchivo = ar.getName().trim();
                 String nomPc = archRel.replace(".o", ".pc").trim();
                 String nomC = archRel.replace(".o", ".c").trim();
-                
+                if(!archRel.contains(".c")){
+                    nomC = archRel + ".c";
+                }
                 if(nomArchivo.equals(nomPc)){
                     listaFinal.add(nomArchivo);
                     dependencias.add(ar);
@@ -153,7 +160,7 @@ public class ParserMake {
                     listaFinal.add(nomArchivo);
                     dependencias.add(ar);
                 }
-                
+                System.out.println("archRel: " + archRel);
                 if(nombreServidor.equals(nomC)){
                     this.archivoFuenteServidor = ar;
                 }

@@ -42,7 +42,7 @@ public class Buscador {
                                         System.out.println("El archivo fuente del servidor: " + make.getArchivoFuenteServidor().getAbsolutePath());
                                         ParserServer parseS = new ParserServer(make);
                                         ServidorTuxedo servidor = parseS.parse();
-                                        servidor.setArchivoFuente(make.getArchivoFuenteServidor());;
+                                        servidor.setArchivoFuente(make.getArchivoFuenteServidor());
                                         System.out.println(servidor);
                                     }
                                 } catch (IOException ex) {

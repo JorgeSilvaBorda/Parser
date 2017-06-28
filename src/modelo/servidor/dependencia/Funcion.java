@@ -57,6 +57,6 @@ public class Funcion {
 
     @Override
     public String toString() {
-        return "Función: " + nombre + "|" + tipo;
+        return "Función: " + nombre + "|" + tipo + System.getProperty("line.separator");
     }
 }
