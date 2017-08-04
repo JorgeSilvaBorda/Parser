@@ -152,7 +152,7 @@ public final class ParserServer {
     public ServidorTuxedo parse() throws CoreException {
         //Preparar código sin comentarios.
         texto = new modelo.Utilidades().quitarComentariosJavaC(texto);
-
+	
         //Obtener las funciones del código.
         //System.out.println("Archivo servidor: " + this.archivoFuente.getAbsolutePath());
         //Para el proceso de los archivos fuentes.

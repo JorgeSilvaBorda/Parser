@@ -1,5 +1,6 @@
 package modelo.osb;
 
+import java.io.File;
 import java.util.LinkedList;
 import modelo.servidor.ServicioTuxedo;
 
@@ -11,6 +12,7 @@ public class ServicioOSB {
     private String nameSpace; //La URL donde se despliega.
     private LinkedList<ServicioTuxedo> llamadosTuxedo;
     private LinkedList<ServicioOSB> llamadosOsb;
+    private File wsdl;
 
     public ServicioOSB() {
         llamadosTuxedo = new LinkedList();

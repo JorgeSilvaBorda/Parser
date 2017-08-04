@@ -2,6 +2,7 @@ package vista;
 
 import controlador.ParserServer;
 import controlador.ParserMake;
+import controlador.ParserOSB;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,7 +32,7 @@ public class Buscador {
                         //log.log(archivo.getAbsolutePath());
                         Utilidades u = new Utilidades();
 
-                        if (u.getExtension(archivo) != null) {
+                        if (u.getExtension(archivo) != null && !archivo.getAbsolutePath().contains("batch")) {
                             if (u.getExtension(archivo).equals("mk")) {
                                 System.out.println("Se procesa make: " + archivo.getAbsolutePath());
                                 try {
@@ -40,14 +41,20 @@ public class Buscador {
                                     MakeFile make = parM.parse(); //Esto devuelve un MakeFile con todo lo que se necesita dentro.
                                     if(make.getGeneraServidor()){
                                         System.out.println("El archivo fuente del servidor: " + make.getArchivoFuenteServidor().getAbsolutePath());
+					
                                         ParserServer parseS = new ParserServer(make);
                                         ServidorTuxedo servidor = parseS.parse();
+					
                                         servidor.setArchivoFuente(make.getArchivoFuenteServidor());
                                         System.out.println(servidor);
                                     }
                                 } catch (IOException ex) {
                                     Logger.getLogger(Buscador.class.getName()).log(Level.SEVERE, null, ex);
                                 }
+                            }else if(u.getExtension(archivo).equals("wsdl")){
+                                ParserOSB parO = new ParserOSB(archivo);
+				System.out.println("Se procesa WSDL: " + archivo.getAbsolutePath());
+				parO.parse();
                             }
                         }
                     }

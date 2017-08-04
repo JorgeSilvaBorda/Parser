@@ -32,7 +32,17 @@ public class Utilidades {
     
     public String quitarComentariosJavaC(String texto){
         if(texto != null){
-            String patron = "((['\"])(?:(?!\\2|\\\\).|\\\\.)*\\2)|\\/\\/[^\\n]*|\\/\\*(?:[^*]|\\*(?!\\/))*\\*\\/";
+	    String patron = "//.*?\\n|/\\*.*?\\*/";
+            //String patron = "((['\"])(?:(?!\\2|\\\\).|\\\\.)*\\2)|\\/\\/[^\\n]*|\\/\\*(?:[^*]|\\*(?!\\/))*\\*\\/";
+            texto = texto.replaceAll(patron, "");
+            return texto;
+        }
+        return "";
+    }
+    
+    public String quitarComentariosXML_HTML(String texto){
+        if(texto != null){
+            String patron = "(<!--)(.*?)((-->)(-->)*)";
             texto = texto.replaceAll(patron, "");
             return texto;
         }
@@ -73,5 +83,13 @@ public class Utilidades {
             }
         }
         return false;
+    }
+    
+    public String quitarCdata(String texto){
+	String patron1 = "(<\\!\\[CDATA\\[)";
+	String patron2 = "\\]\\]";
+	texto = texto.replaceAll(patron1, "");
+	texto = texto.replaceAll(patron2, "");
+	return texto;
     }
 }

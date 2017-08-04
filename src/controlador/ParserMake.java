@@ -160,7 +160,7 @@ public class ParserMake {
                     listaFinal.add(nomArchivo);
                     dependencias.add(ar);
                 }
-                System.out.println("archRel: " + archRel);
+                //System.out.println("archRel: " + archRel);
                 if(nombreServidor.equals(nomC)){
                     this.archivoFuenteServidor = ar;
                 }
