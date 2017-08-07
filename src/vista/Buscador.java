@@ -4,8 +4,7 @@ import controlador.ParserServer;
 import controlador.ParserMake;
 import controlador.ParserOSB;
 import java.io.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import logger.Logger;
 import modelo.Log;
 import modelo.MakeFile;
 import modelo.Parametros;
@@ -40,7 +39,12 @@ public class Buscador {
                                     parM.setRutaFull(archivo.getAbsolutePath());
                                     MakeFile make = parM.parse(); //Esto devuelve un MakeFile con todo lo que se necesita dentro.
                                     if(make.getGeneraServidor()){
-                                        System.out.println("El archivo fuente del servidor: " + make.getArchivoFuenteServidor().getAbsolutePath());
+					try{
+					    System.out.println("El archivo fuente del servidor: " + make.getArchivoFuenteServidor().getAbsolutePath());
+					}catch (Exception ex) {
+					    new Logger("log.txt").log("Error: No se pudo obtener el archivo fuente del servidor.");
+					    new Logger("log.txt").log("Archivo Make en proceso: " + archivo.getAbsolutePath());
+					}
 					
                                         ParserServer parseS = new ParserServer(make);
                                         ServidorTuxedo servidor = parseS.parse();
@@ -49,7 +53,8 @@ public class Buscador {
                                         System.out.println(servidor);
                                     }
                                 } catch (IOException ex) {
-                                    Logger.getLogger(Buscador.class.getName()).log(Level.SEVERE, null, ex);
+                                    System.out.println("No se pudo procesar el archivo: " + archivo.getAbsolutePath());
+				    System.out.println(ex);
                                 }
                             }else if(u.getExtension(archivo).equals("wsdl")){
                                 ParserOSB parO = new ParserOSB(archivo);
