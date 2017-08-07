@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Calendar;
+import java.util.Date;
+import modelo.Fechas;
 
 /**
  * @author Jorge Silva Borda
@@ -11,7 +14,7 @@ import java.io.PrintWriter;
 public class Logger {
 
     File archivo;
-
+    Fechas f = new Fechas();
     public Logger() {
 
     }
@@ -30,7 +33,7 @@ public class Logger {
 	try {
 	    fichero = new FileWriter(this.archivo.getAbsolutePath(), true);
 	    pw = new PrintWriter(fichero);
-	    pw.println(mensaje);
+	    pw.println("[" + f.getFechaHora() + "] " + mensaje);
 	} catch (IOException ex) {
 	    System.out.println("No se puede escribir el fichero de log.");
 	    System.out.println(ex);
@@ -52,7 +55,7 @@ public class Logger {
 	try {
 	    fichero = new FileWriter(this.archivo.getAbsolutePath(), true);
 	    pw = new PrintWriter(fichero);
-	    pw.println(e.toString());
+	    pw.println("[" + f.getFechaHora() + "] " + e.toString());
 	} catch (IOException ex) {
 	    System.out.println("No se puede escribir el fichero de log.");
 	    System.out.println(ex);
@@ -67,4 +70,6 @@ public class Logger {
 	    }
 	}
     }
+    
+    
 }

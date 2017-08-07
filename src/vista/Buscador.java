@@ -5,6 +5,7 @@ import controlador.ParserMake;
 import controlador.ParserOSB;
 import java.io.*;
 import logger.Logger;
+import modelo.Fechas;
 import modelo.Log;
 import modelo.MakeFile;
 import modelo.Parametros;
@@ -21,6 +22,7 @@ public class Buscador {
     Log log = Parametros.log;
 
     public void buscar(File arc) throws CoreException {
+	System.out.println(f.getFechaHora());
         if (arc.exists()) {
             File[] archivos = arc.listFiles();
             if (archivos != null) {

@@ -1,3 +1,0 @@
-Error: No se pudo obtener el archivo fuente del servidor.
-Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\cliente\servidores\fuentes\cliEnrolamientoO2.mk
-No se pudo imprimir los datos del servidor.
