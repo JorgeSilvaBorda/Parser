@@ -242,11 +242,18 @@ public final class ParserServer {
 			    //System.out.println(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString());
 			    //System.out.println(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1]);
 			    System.out.println("Llamada a servicio: " + node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1]);
+			    f = new Funcion(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1], "LlamaServicio");
+			    objeto[0] = f;
+			    objeto[1] = index;
+			    objetos.add(objeto);
+			    break;
+			} else {
+			    objeto[0] = f;
+			    objeto[1] = index;
+			    objetos.add(objeto);
+			    break;
 			}
-			objeto[0] = f;
-			objeto[1] = index;
-			objetos.add(objeto);
-			break;
+
 		}
 		String nodo = String.format(new StringBuilder("%1$").append(index * 2).append("s").toString(), new Object[]{"-"}) + node.getClass().getSimpleName() + offset + " -> " + (printContents ? node.getRawSignature().replaceAll("\n", " \\ ") : node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()));
 		//System.out.println(String.format(new StringBuilder("%1$").append(index * 2).append("s").toString(), new Object[]{"-"}) + node.getClass().getSimpleName() + offset + " -> " + (printContents ? node.getRawSignature().replaceAll("\n", " \\ ") : node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength())));
@@ -277,20 +284,15 @@ public final class ParserServer {
 		    //Las querys terminan con ;
 		    //Expresion para extraer texto de las querys: (EXEC SQL)(\s?)(SELECT|INSERT|UPDATE|DELETE)(.*?);;*
 		}
-
-		//}
 	    }
 	    for (IASTNode iastNode : children) {
 		recorrerArbol(iastNode, index + 1);
 	    }
 	} catch (Exception ex) {
-	    System.out.println("Error al procesar: ");
-	    System.out.println(ex);
 	    Logger log = new Logger("log.txt");
-	    log.log("Error al procesar: ");
+	    log.log("Error al procesar: " + this.make.getRuta());
 	    log.log(ex);
 	}
-
     }
 
     public LinkedList<Funcion> armarFunciones(LinkedList<Object[]> objetos) {

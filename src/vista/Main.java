@@ -3,6 +3,7 @@ package vista;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import logger.Logger;
 import modelo.Parametros;
 import org.eclipse.core.runtime.CoreException;
 
@@ -16,8 +17,11 @@ public class Main {
 
     public static void main(String[] args) throws CoreException {
         if (procesaArgumentos(args) == 0) {
+	    Logger logger = new Logger("log.txt");
             Buscador b = new Buscador();
+	    logger.log("Inicia el proceso de parseo de fuentes.");
             b.buscar(new File(args[0]));
+	    logger.log("Fin del proceso de parseo de fuentes.");
         }
     }
 

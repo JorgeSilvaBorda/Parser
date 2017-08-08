@@ -1,0 +1,1 @@
+[08-08-2017 11:35:11] Inicia el proceso de parseo de fuentes.
