@@ -64,9 +64,6 @@ public class ParserMake {
 	make.setNombre(new File(rutaFull).getName());
 	make.setNombreServer(nomServer);
 	make.setRutaBase(rutaBase);
-	for(File dep : make.getDependencias()){
-	    System.out.println("Dep: " + dep);
-	}
 	return make;
     }
 
@@ -93,7 +90,7 @@ public class ParserMake {
 	String nombre = "";
 	while (m.find()) {
 	    nombre = m.group(5) + m.group(6);
-	    System.out.println("Nombre servidor: " + nombre);
+	    //System.out.println("Nombre servidor: " + nombre);
 	    return nombre;
 	}
 	return nombre;
@@ -133,7 +130,7 @@ public class ParserMake {
     }
 
     public void generarListadoReal() {
-	System.out.println("Nombre servidor: " + this.nombreServidor);
+	//System.out.println("Nombre servidor: " + this.nombreServidor);
 	LinkedList<String> listaFinal = new LinkedList();
 	File archivo = new File(this.rutaBase);
 	File[] archivos = archivo.listFiles();

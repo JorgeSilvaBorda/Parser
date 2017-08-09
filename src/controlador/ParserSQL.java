@@ -37,7 +37,7 @@ public class ParserSQL {
         nodo = emparejarTexto(nodo);
         String declarador = nodo.split("->")[1];
         String nombre = declarador.split("\\(")[0].trim().split(" ")[1];
-        System.out.println("Funcion: " + nombre);
+        //System.out.println("Funcion: " + nombre);
         Pattern p = Pattern.compile(patron, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher m = p.matcher(nodo);
         while (m.find()) {

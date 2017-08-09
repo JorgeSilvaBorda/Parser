@@ -9,6 +9,7 @@ import logger.Logger;
 import modelo.MakeFile;
 import modelo.servidor.ServicioTuxedo;
 import modelo.servidor.ServidorTuxedo;
+import modelo.servidor.dependencia.Dependencia;
 import modelo.servidor.dependencia.Funcion;
 import org.eclipse.cdt.core.dom.ast.ASTVisitor;
 import org.eclipse.cdt.core.dom.ast.ExpansionOverlapsBoundaryException;
@@ -53,74 +54,57 @@ public final class ParserServer {
     private File archivoFuente = null;
     private LinkedList<File> dependencias;
     private String rutaBase;
+    private LinkedList<String[][]> deps = new LinkedList();
 
     ASTVisitor visitor = new ASTVisitor() {//Objeto que recorre
 	@Override
 	public int visit(IASTName name) {
 	    if ((name.getParent() instanceof CPPASTFunctionDeclarator || name.getParent() instanceof CPPASTFunctionCallExpression)) {
-		System.out.println(name.getClass().getSimpleName() + " " + name.getRawSignature() + " " + name.getParent().getClass().getSimpleName());
+		//System.out.println(name.getClass().getSimpleName() + " " + name.getRawSignature() + " " + name.getParent().getClass().getSimpleName());
 	    }
 	    return 3;
 	}
 
 	@Override
 	public int visit(IASTDeclaration declaration) {
-	    System.out.println(declaration + " " + declaration.getRawSignature());
+	    //System.out.println(declaration + " " + declaration.getRawSignature());
 
 	    if ((declaration instanceof IASTSimpleDeclaration)) {
 		IASTSimpleDeclaration ast = (IASTSimpleDeclaration) declaration;
-		//try {
-		//System.out.println(ast.getSyntax().toString() + " " + ast.getChildren().length);
+
 		IASTNode typedef = ast.getChildren().length == 1 ? ast.getChildren()[0] : ast.getChildren()[1];
-		//System.out.println(typedef);
 		IASTNode[] children = typedef.getChildren();
 		if ((children != null) && (children.length > 0)) {
-		    //System.out.println(children[0].getRawSignature());
 		}
-		//} catch (ExpansionOverlapsBoundaryException e) {
-		//System.out.println("Error: " + e);
-		//}
 
 		IASTDeclarator[] declarators = ast.getDeclarators();
 		for (IASTDeclarator iastDeclarator : declarators) {
-		    //System.out.println(iastDeclarator.getName());
 		}
 
 		IASTAttribute[] attributes = ast.getAttributes();
 		for (IASTAttribute iastAttribute : attributes) {
-		    //System.out.println(iastAttribute);
 		}
 	    }
 
 	    if ((declaration instanceof IASTFunctionDefinition)) {
 		IASTFunctionDefinition ast = (IASTFunctionDefinition) declaration;
 		IScope scope = ast.getScope();
-		//try {
-		//System.out.println(scope.getParent().getScopeName());
-		//System.out.println(ast.getSyntax());
-		//} catch (DOMException | ExpansionOverlapsBoundaryException e) {
-		//System.out.println("Error: " + e);
-		//}
 		ICPPASTFunctionDeclarator typedef = (ICPPASTFunctionDeclarator) ast.getDeclarator();
-		//System.out.println(typedef.getName());
 	    }
 	    return 3;
 	}
 
 	public int visit(IASTFunctionCallExpression call) {
-	    //System.out.println(call + " " + call.getRawSignature());
 	    return 3;
 	}
 
 	@Override
 	public int visit(IASTTypeId typeId) {
-	    //System.out.println(typeId.getRawSignature());
 	    return 3;
 	}
 
 	@Override
 	public int visit(IASTStatement statement) {
-	    //System.out.println(statement.getRawSignature());
 	    return 3;
 	}
 
@@ -153,14 +137,8 @@ public final class ParserServer {
     public ServidorTuxedo parse() throws CoreException {
 	//Preparar código sin comentarios.
 	texto = new modelo.Utilidades().quitarComentariosJavaC(texto);
-
-	//Obtener las funciones del código.
-	//System.out.println("Archivo servidor: " + this.archivoFuente.getAbsolutePath());
-	//Para el proceso de los archivos fuentes.
 	for (File dependencia : dependencias) {
 	    if (new modelo.Utilidades().getExtension(dependencia) != null) {
-		System.out.println("Archivo examinado: " + dependencia.getAbsolutePath());
-		//FileContent fileContent = FileContent.createForExternalFileLocation(this.archivoFuente.getAbsolutePath());
 		FileContent fileContent = FileContent.createForExternalFileLocation(dependencia.getAbsolutePath());
 		Map definedSymbols = new HashMap();
 		String[] includePaths = new String[0];
@@ -172,7 +150,6 @@ public final class ParserServer {
 		IASTTranslationUnit translationUnit = GPPLanguage.getDefault().getASTTranslationUnit(fileContent, info, emptyIncludes, null, opts, log);
 		IASTPreprocessorIncludeStatement[] includes = translationUnit.getIncludeDirectives();
 		for (IASTPreprocessorIncludeStatement include : includes) {
-		    //System.out.println("include - " + include.getName());
 		}
 		//recorrerArbol(translationUnit, 1);
 		visitor.shouldVisitNames = true;
@@ -184,6 +161,7 @@ public final class ParserServer {
 		visitor.shouldVisitTypeIds = false;
 
 		//translationUnit.accept(visitor);
+		System.out.println("Dependencia de servidor: " + dependencia.getAbsolutePath());
 		recorrerArbol(translationUnit, 1); //--------------Mostrar contenido
 		funciones = armarFunciones2(objetos);
 	    }
@@ -215,14 +193,11 @@ public final class ParserServer {
 	    }
 
 	    if (!node.getClass().getSimpleName().equals("CPPASTTranslationUnit")) {
-		//if (node.getClass().getSimpleName().equals("CPPASTFunctionDeclarator")
-		//|| node.getClass().getSimpleName().equals("CPPASTFunctionCallExpression")
-		/*|| node.getClass().getSimpleName().equals("CPPASTName")*///) {
-		//System.out.print(index + ":");
 
 		Object[] objeto = new Object[2];
 		switch (node.getClass().getSimpleName()) {
 		    case "CPPASTFunctionDeclarator":
+			//System.out.println(index + ": Declara: " + node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString());
 			nombre = node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\\(")[0];
 			f = new Funcion(nombre, "Declara");
 			if (node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\\(")[1].contains("TPSVCINFO")) {
@@ -232,17 +207,16 @@ public final class ParserServer {
 			}
 			objeto[0] = f;
 			objeto[1] = index;
-
 			objetos.add(objeto);
 			break;
 		    case "CPPASTFunctionCallExpression":
+			System.out.println(index + ": Llama:" + node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString());
 			nombre = node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\\(")[0];
 			f = new Funcion(nombre, "Llama");
 			if (f.getNombre().equals("tpcall")) {
-			    //System.out.println(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString());
-			    //System.out.println(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1]);
-			    System.out.println("Llamada a servicio: " + node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1]);
-			    f = new Funcion(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1], "LlamaServicio");
+			    Funcion llam = new Funcion(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1], "LlamaServicio");
+			    //System.out.println("Se guarda llamada a servicio.");
+			    ((Funcion)objetos.get(objetos.size() - 1)[0]).addLlamado(llam);
 			    objeto[0] = f;
 			    objeto[1] = index;
 			    objetos.add(objeto);
@@ -261,15 +235,6 @@ public final class ParserServer {
 			|| nodo.toUpperCase().contains("UPDATE")
 			|| nodo.toUpperCase().contains("INSERT")
 			|| nodo.toUpperCase().contains("DELETE")) {
-		    //System.out.println(String.format(new StringBuilder("%1$").append(index * 2).append("s").toString(), new Object[]{"-"}) + node.getClass().getSimpleName() + offset + " -> " + (printContents ? node.getRawSignature().replaceAll("\n", " \\ ") : node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength())));
-		    //Para los sql.c
-		    //CPPASTSimpleDeclaration contiene la declaración de una variable con query.
-		    //Luego viene CPPASTDeclarator con el nombre de la variable (Puede contener asterisco delante de ella) [* nomVar =]
-		    //Luego CPPASTDeclarator Contiene el String de la query
-		    //Expresion para extraer el texto: (\")(select|insert|update|delete)(.*?)(;;*)
-		    //CPPASTFunctionDefinition Indica que viene la declaración de una función con query. 
-		    //CPPASTExpressionStatement Puede tratarse de una variable que contenga query
-		    //CPPASTLiteralExpression contiene la cadena con query en caso de ser
 		    ParserSQL parserSql = new ParserSQL();
 		    if (node.getClass().getSimpleName().equals("CPPASTSimpleDeclaration") && nodo.contains(" char ")) {
 			//Es variable
@@ -278,11 +243,6 @@ public final class ParserServer {
 			//Es funcion
 			parserSql.parsearFuncion(nodo);
 		    }
-		    //Para los sql.pc
-		    //CPPASTFunctionDefinition 
-		    //CPPASTCompoundStatement contendría la query
-		    //Las querys terminan con ;
-		    //Expresion para extraer texto de las querys: (EXEC SQL)(\s?)(SELECT|INSERT|UPDATE|DELETE)(.*?);;*
 		}
 	    }
 	    for (IASTNode iastNode : children) {
@@ -352,10 +312,8 @@ public final class ParserServer {
 	    if (f.getEsServicio()) {
 		ServicioTuxedo servicio = new ServicioTuxedo();
 		servicio.setNombre(f.getNombre());
-
 		if (f.getLlamados().size() > 0) {
 		    for (Funcion llam : f.getLlamados()) {
-
 			if (!new modelo.Utilidades().existeEnLista(llam, servicio.getFunciones())) {
 			    servicio.addLlamado(llam);
 			}
@@ -364,14 +322,12 @@ public final class ParserServer {
 		if (!servidor.getServicios().contains(servicio)) {
 		    servidor.addServicio(servicio);
 		}
-
 	    } else {
 		if (!new modelo.Utilidades().existeEnLista(f, servidor.getFunciones())) {
 		    servidor.addFuncion(f);
 		}
 	    }
 	}
-
 	return servidor;
     }
 

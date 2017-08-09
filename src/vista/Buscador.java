@@ -5,7 +5,6 @@ import controlador.ParserMake;
 import controlador.ParserOSB;
 import java.io.*;
 import logger.Logger;
-import modelo.Conexion;
 import modelo.Log;
 import modelo.MakeFile;
 import modelo.Parametros;
@@ -52,7 +51,8 @@ public class Buscador {
                                         ServidorTuxedo servidor = parseS.parse();
 					
                                         servidor.setArchivoFuente(make.getArchivoFuenteServidor());
-                                        System.out.println(servidor);
+                                        //System.out.println(servidor);
+					servidor.almacenar();
                                     }
                                 } catch (IOException ex) {
                                     System.out.println("No se pudo procesar el archivo: " + archivo.getAbsolutePath());

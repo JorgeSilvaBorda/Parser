@@ -3,6 +3,7 @@ package modelo.servidor;
 import java.io.File;
 import java.util.LinkedList;
 import logger.Logger;
+import modelo.servidor.dependencia.Dependencia;
 import modelo.servidor.dependencia.Funcion;
 
 /**
@@ -96,6 +97,8 @@ public class ServidorTuxedo {
 		builder.append(System.getProperty("line.separator"));
 	    }
 
+	    builder.append(System.getProperty("line.separator"));
+	    builder.append(System.getProperty("line.separator"));
 	    builder.append("Servicios expuestos:");
 	    builder.append(System.getProperty("line.separator"));
 	    for (ServicioTuxedo servicio : serviciosExpuestos) {
@@ -105,12 +108,14 @@ public class ServidorTuxedo {
 		    builder.append("Llama: ");
 		    builder.append(System.getProperty("line.separator"));
 		    for (Funcion f : servicio.getFunciones()) {
-			builder.append("    -" + f.getNombre());
+			builder.append("    -" + f.getNombre() + " " + f.getTipo());
 			builder.append(System.getProperty("line.separator"));
 		    }
 		}
 	    }
 
+	    builder.append(System.getProperty("line.separator"));
+	    builder.append(System.getProperty("line.separator"));
 	    if (getFunciones().size() > 0) {
 		builder.append("Funciones declaradas: ");
 		builder.append(System.getProperty("line.separator"));
@@ -133,5 +138,23 @@ public class ServidorTuxedo {
 
 	return builder.toString();
     }
+    
+    public void ajustarLlamados(){
 
+    }
+
+    public void almacenar(){
+	int idServidor = datos.Datos.insertServidorTux(this);
+	for(ServicioTuxedo servicio : this.getServicios()){
+	    datos.Datos.insertarServicio(servicio, idServidor);
+	    System.out.println("Servicio: " + servicio.getNombre());
+	    for(Funcion f : servicio.getFunciones()){
+		System.out.println("	Llama Funcion: " + f.getNombre());
+		for(Funcion subF : f.getLlamados()){
+		    System.out.println("	Llama a: " + subF.getNombre());
+		}
+	    }
+	}
+
+    }
 }
