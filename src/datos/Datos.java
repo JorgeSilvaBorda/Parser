@@ -17,7 +17,7 @@ public class Datos {
     private static final Logger logger = new Logger("log.txt");
 
     public static int insertServidorTux(ServidorTuxedo servidor) {
-	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
 	String query = "SELECT COUNT(1) CUENTA FROM SERVIDORTUX WHERE NOMSERVIDORTUX = '" + servidor.getNombre() + "'";
 	con.abrir();
 	ResultSet rs = con.ejecutarQuery(query);
@@ -76,7 +76,7 @@ public class Datos {
     }
 
     public static int insertarServicio(ServicioTuxedo servicio, int idServidor) {
-	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
 	String query = "SELECT COUNT(1) CUENTA FROM SERVICIOTUX WHERE NOMSERVICIOTUX = '" + servicio.getNombre() + "'";
 	int cont = 0;
 	con.abrir();
@@ -94,7 +94,7 @@ public class Datos {
 	    return 0;
 	}
 	if (cont > 0) {
-	    con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	    con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
 	    query = "SELECT IDSERVICIOTUX FROM SERVICIOTUX WHERE NOMSERVICIOTUX = '" + servicio.getNombre() + "'";
 	    con.abrir();
 	    try {
@@ -116,7 +116,7 @@ public class Datos {
 	} else {
 	    
 	    query = "INSERT INTO SERVICIOTUX(NOMSERVICIOTUX) VALUES('" + servicio.getNombre() + "')";
-	    con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	    con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
 	    con.abrir();
 	    con.ejecutar(query);
 	    con.cerrar();
@@ -141,7 +141,7 @@ public class Datos {
     }
 
     public static int insertarServidorServicio(int idServidor, int idServicio) {
-	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
 	String query = "EXEC INS_SERVIDORSERVICIO " + idServidor + ", " + idServicio;
 	con.abrir();
 	ResultSet rs = con.ejecutarQuery(query);
@@ -162,18 +162,18 @@ public class Datos {
     }
 
     public static void insertarServicioServicio(int idServicio, int idServicio2) {
-	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
     }
 
     public static void insertarFuncion(Funcion funcion) {
-	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
     }
 
     public static void insertarServicioFuncion(Funcion funcion) {
-	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
     }
 
     public static void insertarDependencia(Dependencia dependencia) {
-	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "arquitectura", "arquitectura");
+	Conexion con = new Conexion("172.20.248.81", "ARQUITECTURA", "sa", "Administrador01");
     }
 }

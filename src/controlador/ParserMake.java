@@ -21,6 +21,9 @@ public class ParserMake {
     private String rutaFull;
     private File archivoFuenteServidor;
     private String nombreServidor;
+    private LinkedList<String[]> servicioAlias = new LinkedList();
+    private LinkedList<String> posiblesNombresServidor = new LinkedList();
+    public File archivoMakeFuente;
 
     public ParserMake() {
 	this.make = new MakeFile();
@@ -33,6 +36,7 @@ public class ParserMake {
     }
 
     public MakeFile parse() {
+	make.archivoMake = this.archivoMakeFuente;
 	//Quitar los comentarios del archivo para evitar leer código comentado.
 	texto = new modelo.Utilidades().quitarComentariosMake(texto);
 	//System.out.println("Directorio base: " + this.rutaBase);
@@ -54,7 +58,6 @@ public class ParserMake {
 	make.setTexto(texto);
 	make.setDependencias(dependencias);
 	make.setNombre(nomServer);
-
 	if (nomVarServer == null || nomVarServer.trim().equals("")) {
 	    make.setGeneraServidor(false);
 	} else {
@@ -68,8 +71,11 @@ public class ParserMake {
     }
 
     public String getNombreVarServidor() {
-	String re1 = "(buildserver)(.*)(-v)(\\s+)(-o)(\\s+)(\\$)(\\()";
-	String re2 = "(([a-z][a-z]+)(_?)(([a-z][a-z]+)?))";
+	
+	//String re1 = "(buildserver)(.*)(-v)(\\s+)(-o)(\\s+)(\\$)(\\()";
+	String re1 = "(buildserver)(.*)(-v)?(\\s+)(-o)(\\s+)(\\$)(\\()";
+	//String re2 = "(([a-z][a-z]+)(_?)(([a-z][a-z]+)?))";
+	String re2 = "(\\w+)";
 	String re3 = "(\\))";
 
 	Pattern p = Pattern.compile(re1 + re2 + re3, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
@@ -78,6 +84,7 @@ public class ParserMake {
 	String varNomServer = "";
 	while (m.find()) {
 	    varNomServer = m.group(9);
+	    //System.out.println("Nombre de la variable: " + varNomServer);
 	}
 	return varNomServer;
     }
@@ -90,6 +97,7 @@ public class ParserMake {
 	String nombre = "";
 	while (m.find()) {
 	    nombre = m.group(5) + m.group(6);
+	    posiblesNombresServidor.add(m.group(5) + m.group(6));
 	    //System.out.println("Nombre servidor: " + nombre);
 	    return nombre;
 	}
@@ -195,6 +203,27 @@ public class ParserMake {
 		    }else if(ar.getName().equals(nombre + ".pc")){
 			listaFinal.add(nombre + ".pc");
 			dependencias.add(ar);
+		    }else if(ar.getName().equals(nombre + "_sql.pc")){
+			listaFinal.add(nombre + "_sql.pc");
+			dependencias.add(ar);
+		    }else if(ar.getName().equals(nombre + "_fun.pc")){
+			listaFinal.add(nombre + "_fun.pc");
+			dependencias.add(ar);
+		    }else if(ar.getName().equals(nombre + "_sql.c")){
+			listaFinal.add(nombre + "_sql.c");
+			dependencias.add(ar);
+		    }else if(ar.getName().equals(nombre + "_fun.c")){
+			listaFinal.add(nombre + "_fun.c");
+			dependencias.add(ar);
+		    }else if(ar.getName().equals(nombre + "_fun_tux.c")){
+			listaFinal.add(nombre + "_fun_tux.c");
+			dependencias.add(ar);
+		    }else if(ar.getName().equals(nombre + "_funTux.c")){
+			listaFinal.add(nombre + "_funTux.c");
+			dependencias.add(ar);
+		    }else if(ar.getName().equals(nombre + "_fun_Fcd.c")){
+			listaFinal.add(nombre + "_fun_Fcd.c");
+			dependencias.add(ar);
 		    }
 		    
 		    if(ar.getName().equals(this.nombreServidor + ".c")){
@@ -208,10 +237,39 @@ public class ParserMake {
 		}
 	    }
 	}
+	//Procesar dependencias con excepciones-------------------------------------------------------------------------------------------------------
+	/**
+	 * En algunos casos no se logra identificar correctamente los archivos relacionados, ya que el nombre de la variable que contiene el nombre
+	 * del servidor, es diferente del nombre de la variable que contiene los archivos asociados.
+	**/
+	listaFinal = procesarDependenciasExcepciones(this.make, listaFinal);
+	//Fin proceso excepciones---------------------------------------------------------------------------------------------------------------------
+	
 	listaFinal = new modelo.Utilidades().quitarRepetidosLista(listaFinal);
 	archivosRelacionados = listaFinal;
     }
 
+    public LinkedList<String> procesarDependenciasExcepciones(MakeFile make, LinkedList<String> lista){
+	if(make.getArchivoFuenteServidor().getName().equals("cctCuentaCorrienteFcc.c")){
+	    File archivo = new File(this.rutaBase + "\\cuentaCorrienteFcc_fun_Fcd.c");
+	    if(archivo.exists()){
+		lista.add("cuentaCorrienteFcc_fun_Fcd.c");
+		dependencias.add(archivo);
+	    }
+	    archivo = new File(this.rutaBase + "\\cuentaCorrienteFcc_sql.pc");
+	    if(archivo.exists()){
+		lista.add("cuentaCorrienteFcc_sql.pc");
+		dependencias.add(archivo);
+	    }
+	    archivo = new File(this.rutaBase + "\\cuentaCorrienteFcc_fun_tux.c");
+	    if(archivo.exists()){
+		lista.add("cuentaCorrienteFcc_fun_tux.c");
+		dependencias.add(archivo);
+	    }
+	}
+	return lista;
+    }
+    
     public File getArchivoFuenteServidor() {
 	return archivoFuenteServidor;
     }

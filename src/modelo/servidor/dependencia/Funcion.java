@@ -1,5 +1,6 @@
 package modelo.servidor.dependencia;
 
+import java.io.File;
 import java.util.LinkedList;
 
 /**
@@ -8,10 +9,12 @@ import java.util.LinkedList;
  */
 public class Funcion {
 
-    private String nombre;
-    private String tipo; //Llamada o Declarada
-    private boolean esServicio;
-    private LinkedList<Funcion> llamados;
+    public String nombre;
+    public String tipo; //Llamada o Declarada
+    public boolean esServicio;
+    public LinkedList<Funcion> llamados;
+    public String texto = "";
+    public File dependenciaContenedora;
 
     public Funcion() {
         llamados = new LinkedList();

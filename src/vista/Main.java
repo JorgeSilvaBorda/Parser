@@ -16,6 +16,7 @@ public class Main {
     private static final String SEP = modelo.Parametros.SEP;
 
     public static void main(String[] args) throws CoreException {
+	modelo.Escritor.iniciarInterfaces();
         if (procesaArgumentos(args) == 0) {
 	    Logger logger = new Logger("log.txt");
             Buscador b = new Buscador();

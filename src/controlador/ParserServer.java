@@ -5,11 +5,12 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import logger.Logger;
 import modelo.MakeFile;
 import modelo.servidor.ServicioTuxedo;
 import modelo.servidor.ServidorTuxedo;
-import modelo.servidor.dependencia.Dependencia;
 import modelo.servidor.dependencia.Funcion;
 import org.eclipse.cdt.core.dom.ast.ASTVisitor;
 import org.eclipse.cdt.core.dom.ast.ExpansionOverlapsBoundaryException;
@@ -40,10 +41,10 @@ import org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTTranslationUnit;
 import org.eclipse.core.runtime.CoreException;
 
 /**
- * Clase para parsear los servidores Tuxedo y ubicar todas las funciones
- * internas.
+ * Clase para parsear los servidores Tuxedo y ubicar todas las funciones internas.
  *
  * @author Jorge Silva Borda
+ * @deprecated Se reemplaza con {@link controlador.ParseServer2}
  */
 public final class ParserServer {
 
@@ -54,7 +55,8 @@ public final class ParserServer {
     private File archivoFuente = null;
     private LinkedList<File> dependencias;
     private String rutaBase;
-    private LinkedList<String[][]> deps = new LinkedList();
+    private LinkedList<String[]> aliases = new LinkedList();
+    public boolean conError = false;
 
     ASTVisitor visitor = new ASTVisitor() {//Objeto que recorre
 	@Override
@@ -62,6 +64,7 @@ public final class ParserServer {
 	    if ((name.getParent() instanceof CPPASTFunctionDeclarator || name.getParent() instanceof CPPASTFunctionCallExpression)) {
 		//System.out.println(name.getClass().getSimpleName() + " " + name.getRawSignature() + " " + name.getParent().getClass().getSimpleName());
 	    }
+
 	    return 3;
 	}
 
@@ -161,8 +164,8 @@ public final class ParserServer {
 		visitor.shouldVisitTypeIds = false;
 
 		//translationUnit.accept(visitor);
-		System.out.println("Dependencia de servidor: " + dependencia.getAbsolutePath());
-		recorrerArbol(translationUnit, 1); //--------------Mostrar contenido
+		//System.out.println("Dependencia de servidor: " + dependencia.getAbsolutePath());
+		recorrerArbol(translationUnit, 1, dependencia); //--------------Mostrar contenido
 		funciones = armarFunciones2(objetos);
 	    }
 
@@ -172,7 +175,7 @@ public final class ParserServer {
 
     LinkedList<Object[]> objetos = new LinkedList();
 
-    private void recorrerArbol(IASTNode node, int index) {
+    private void recorrerArbol(IASTNode node, int index, File dependencia) {
 	IASTNode[] children = node.getChildren();
 	Funcion f;
 	String nombre;
@@ -187,9 +190,12 @@ public final class ParserServer {
 		offset = node.getSyntax() != null ? " (offset: " + node.getFileLocation().getNodeOffset() + "," + node.getFileLocation().getNodeLength() + ")" : "";
 		printContents = node.getFileLocation().getNodeLength() < 30;
 	    } catch (ExpansionOverlapsBoundaryException e) {
-		System.out.println("Error: " + e);
+		//System.out.println("Error: " + e);
+		//logear error e indicar cuál es el archivo para post proceso manual
+		conError = true;
 	    } catch (UnsupportedOperationException e) {
 		offset = "UnsupportedOperationException";
+		conError = true;
 	    }
 
 	    if (!node.getClass().getSimpleName().equals("CPPASTTranslationUnit")) {
@@ -210,13 +216,13 @@ public final class ParserServer {
 			objetos.add(objeto);
 			break;
 		    case "CPPASTFunctionCallExpression":
-			System.out.println(index + ": Llama:" + node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString());
+			//System.out.println(index + ": Llama:" + node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString());
 			nombre = node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\\(")[0];
 			f = new Funcion(nombre, "Llama");
 			if (f.getNombre().equals("tpcall")) {
 			    Funcion llam = new Funcion(node.getRawSignature().subSequence(0, node.getFileLocation().getNodeLength()).toString().split("\"")[1], "LlamaServicio");
 			    //System.out.println("Se guarda llamada a servicio.");
-			    ((Funcion)objetos.get(objetos.size() - 1)[0]).addLlamado(llam);
+			    ((Funcion) objetos.get(objetos.size() - 1)[0]).addLlamado(llam);
 			    objeto[0] = f;
 			    objeto[1] = index;
 			    objetos.add(objeto);
@@ -246,7 +252,7 @@ public final class ParserServer {
 		}
 	    }
 	    for (IASTNode iastNode : children) {
-		recorrerArbol(iastNode, index + 1);
+		recorrerArbol(iastNode, index + 1, dependencia);
 	    }
 	} catch (Exception ex) {
 	    Logger log = new Logger("log.txt");
@@ -328,7 +334,39 @@ public final class ParserServer {
 		}
 	    }
 	}
+	//Acá meter el parseo del texto del MakeFile para buscar los aliases.
+	buscarAliases(this.make.getTexto());
+	servidor.setAliases(this.aliases);
+	servidor.llamadosDependencias();
+	servidor.conError = this.conError;
 	return servidor;
+    }
+
+    private void buscarAliases(String textoMake) {
+	
+	String regex = "(-s)(\\s+)(\\w+)((,)(\\w+))*(:(\\w+))?";
+	Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+	Matcher m = p.matcher(textoMake);
+	while (m.find()) {
+	    this.procesarAliases(m.group());
+	}
+    }
+    
+    public void procesarAliases(String linea){
+	if(linea.contains(":")){
+	    String servicio = linea.split("\\:")[linea.split("\\:").length - 1];
+	    linea = linea.replaceAll("-s", "");
+	    linea = linea.replaceAll(" ", "");
+	    linea = linea.replaceAll(":" + servicio, "");
+	    String[] aliases = linea.split(",");
+	    for(String alias : aliases){
+		if(!servicio.equals(alias)){
+		    //System.out.println(servicio + ":" + alias);
+		    this.aliases.add(new String[]{servicio, alias});
+		}
+		
+	    }
+	}
     }
 
     public LinkedList<File> cargarDependencias() {

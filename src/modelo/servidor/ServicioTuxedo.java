@@ -8,9 +8,9 @@ import modelo.servidor.dependencia.Funcion;
  * @author Jorge Silva Borda
  */
 public class ServicioTuxedo {
-    private String nombre;
-    private LinkedList<Funcion> funciones;
-    private LinkedList<String> llamadosServicios;
+    public String nombre;
+    public LinkedList<Funcion> funciones;
+    public LinkedList<String> llamadosServicios;
     
     public ServicioTuxedo(){
         funciones = new LinkedList();
