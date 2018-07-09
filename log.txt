@@ -1,0 +1,591 @@
+[08-08-2017 11:35:11] Inicia el proceso de parseo de fuentes.
+[09-08-2017 09:46:16] Inicia el proceso de parseo de fuentes.
+[09-08-2017 09:52:20] Inicia el proceso de parseo de fuentes.
+[09-08-2017 09:53:10] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:08:46] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:09:32] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:12:32] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:13:24] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:20:28] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:21:18] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:21:52] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:22:40] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:22:56] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:23:50] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:28:38] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:29:24] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:33:46] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:34:35] Fin del proceso de parseo de fuentes.
+[09-08-2017 10:37:46] Inicia el proceso de parseo de fuentes.
+[09-08-2017 10:38:38] Fin del proceso de parseo de fuentes.
+[09-08-2017 11:00:48] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:07:23] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:08:13] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:24:40] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:27:16] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:28:47] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:30:28] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:32:29] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:36:05] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:38:44] Inicia el proceso de parseo de fuentes.
+[09-08-2017 11:40:54] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:25:33] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:26:44] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:35:15] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:37:30] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:39:18] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:40:05] Fin del proceso de parseo de fuentes.
+[09-08-2017 12:40:57] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:42:17] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:48:15] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:51:06] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:52:02] Fin del proceso de parseo de fuentes.
+[09-08-2017 12:55:39] Inicia el proceso de parseo de fuentes.
+[09-08-2017 12:56:57] Inicia el proceso de parseo de fuentes.
+[09-08-2017 13:24:37] Inicia el proceso de parseo de fuentes.
+[09-08-2017 13:25:29] Fin del proceso de parseo de fuentes.
+[09-08-2017 13:25:37] Inicia el proceso de parseo de fuentes.
+[09-08-2017 13:26:21] Fin del proceso de parseo de fuentes.
+[09-08-2017 13:40:11] Inicia el proceso de parseo de fuentes.
+[09-08-2017 13:41:48] Inicia el proceso de parseo de fuentes.
+[09-08-2017 13:43:31] Inicia el proceso de parseo de fuentes.
+[09-08-2017 13:44:36] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:10:04] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:11:13] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:12:13] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:12:37] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:13:42] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:14:11] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:15:11] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:34:14] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:35:12] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:39:43] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:40:39] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:42:23] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:43:23] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:43:43] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:44:42] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:46:07] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:47:11] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:47:42] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:48:32] Fin del proceso de parseo de fuentes.
+[09-08-2017 14:49:45] Inicia el proceso de parseo de fuentes.
+[09-08-2017 14:50:38] Fin del proceso de parseo de fuentes.
+[09-08-2017 15:17:15] Inicia el proceso de parseo de fuentes.
+[09-08-2017 15:18:08] Fin del proceso de parseo de fuentes.
+[09-08-2017 15:20:15] Inicia el proceso de parseo de fuentes.
+[09-08-2017 15:21:02] Inicia el proceso de parseo de fuentes.
+[09-08-2017 15:22:07] Fin del proceso de parseo de fuentes.
+[09-08-2017 15:24:06] Inicia el proceso de parseo de fuentes.
+[09-08-2017 16:20:07] Inicia el proceso de parseo de fuentes.
+[09-08-2017 16:21:05] Fin del proceso de parseo de fuentes.
+[09-08-2017 16:37:00] Inicia el proceso de parseo de fuentes.
+[09-08-2017 16:38:10] Fin del proceso de parseo de fuentes.
+[09-08-2017 16:47:02] Inicia el proceso de parseo de fuentes.
+[09-08-2017 16:48:19] Fin del proceso de parseo de fuentes.
+[09-08-2017 16:52:23] Inicia el proceso de parseo de fuentes.
+[09-08-2017 16:53:36] Fin del proceso de parseo de fuentes.
+[09-08-2017 16:54:02] Inicia el proceso de parseo de fuentes.
+[09-08-2017 17:16:12] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[09-08-2017 17:16:12] java.lang.ArrayIndexOutOfBoundsException: 1
+[09-08-2017 17:16:15] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[09-08-2017 17:16:15] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:16:34] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[09-08-2017 17:16:34] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:16:34] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[09-08-2017 17:16:34] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:17:00] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[09-08-2017 17:17:00] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:17:02] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[09-08-2017 17:17:02] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:17:33] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[09-08-2017 17:17:33] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:17:36] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[09-08-2017 17:17:36] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:21:23] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecario.mk
+[09-08-2017 17:21:23] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:22:31] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[09-08-2017 17:22:31] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:26:37] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empext.mk
+[09-08-2017 17:26:37] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:26:57] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empExtCmr.mk
+[09-08-2017 17:26:57] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:27:11] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empextSCB1.mk
+[09-08-2017 17:27:11] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:46:55] Error: No se pudo obtener el archivo fuente del servidor.
+[09-08-2017 17:46:55] Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\cliente\servidores\fuentes\cliEnrolamientoO2.mk
+[09-08-2017 17:51:46] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[09-08-2017 17:51:46] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:51:46] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[09-08-2017 17:51:46] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:53:11] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[09-08-2017 17:53:11] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:53:11] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[09-08-2017 17:53:11] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:53:29] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[09-08-2017 17:53:29] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:53:29] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[09-08-2017 17:53:29] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:54:43] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[09-08-2017 17:54:43] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:54:43] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[09-08-2017 17:54:43] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:54:52] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[09-08-2017 17:54:52] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 17:54:52] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[09-08-2017 17:54:52] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:15:32] Inicia el proceso de parseo de fuentes.
+[09-08-2017 18:37:15] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[09-08-2017 18:37:15] java.lang.ArrayIndexOutOfBoundsException: 1
+[09-08-2017 18:37:18] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[09-08-2017 18:37:18] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:37:35] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[09-08-2017 18:37:35] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:37:35] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[09-08-2017 18:37:35] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:38:03] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[09-08-2017 18:38:03] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:38:05] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[09-08-2017 18:38:05] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:38:35] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[09-08-2017 18:38:35] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:38:37] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[09-08-2017 18:38:37] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:43:01] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecario.mk
+[09-08-2017 18:43:01] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 18:44:23] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[09-08-2017 18:44:23] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 20:27:56] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empext.mk
+[09-08-2017 20:27:56] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 20:28:19] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empExtCmr.mk
+[09-08-2017 20:28:19] java.lang.ArrayIndexOutOfBoundsException
+[09-08-2017 20:28:34] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empextSCB1.mk
+[09-08-2017 20:28:34] java.lang.ArrayIndexOutOfBoundsException
+[05-02-2018 09:58:22] Inicia el proceso de parseo de fuentes.
+[11-05-2018 14:11:22] Inicia el proceso de parseo de fuentes.
+[11-05-2018 14:57:54] Inicia el proceso de parseo de fuentes.
+[11-05-2018 16:21:54] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[11-05-2018 16:21:54] java.lang.ArrayIndexOutOfBoundsException: 1
+[11-05-2018 16:21:57] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[11-05-2018 16:21:57] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:25:47] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[11-05-2018 16:25:47] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:25:47] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[11-05-2018 16:25:47] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:27:32] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[11-05-2018 16:27:32] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:27:35] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[11-05-2018 16:27:35] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:31:37] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[11-05-2018 16:31:37] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:31:39] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[11-05-2018 16:31:39] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:48:39] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecario.mk
+[11-05-2018 16:48:39] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:51:45] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[11-05-2018 16:51:45] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:58:20] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empext.mk
+[11-05-2018 16:58:20] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:58:56] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empExtCmr.mk
+[11-05-2018 16:58:56] java.lang.ArrayIndexOutOfBoundsException
+[11-05-2018 16:59:16] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empextSCB1.mk
+[11-05-2018 16:59:16] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:28:22] Inicia el proceso de parseo de fuentes.
+[15-05-2018 09:44:05] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 09:44:05] java.lang.ArrayIndexOutOfBoundsException: 1
+[15-05-2018 09:44:07] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 09:44:07] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:44:11] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 09:44:11] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:44:11] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 09:44:11] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:44:32] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 09:44:32] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:44:33] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 09:44:33] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:44:49] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[15-05-2018 09:44:49] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:44:50] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[15-05-2018 09:44:50] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:47:02] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecario.mk
+[15-05-2018 09:47:02] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:47:54] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[15-05-2018 09:47:54] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:51:49] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empext.mk
+[15-05-2018 09:51:49] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:52:12] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empExtCmr.mk
+[15-05-2018 09:52:12] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 09:52:28] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empextSCB1.mk
+[15-05-2018 09:52:28] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:08:37] Error: No se pudo obtener el archivo fuente del servidor.
+[15-05-2018 10:08:37] Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\cliente\servidores\fuentes\cliEnrolamientoO2.mk
+[15-05-2018 10:12:53] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 10:12:53] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:12:53] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 10:12:53] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:14:25] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 10:14:25] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:14:25] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 10:14:25] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:14:47] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 10:14:47] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:14:47] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 10:14:47] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:15:52] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 10:15:52] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:15:52] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 10:15:52] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:16:02] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 10:16:02] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:16:02] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 10:16:02] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:21:34] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 10:21:34] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:21:43] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 10:21:43] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:21:43] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 10:21:43] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:22:18] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 10:22:18] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:25:34] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\hipoteca\servidores\fuentes\hipotecario.mk
+[15-05-2018 10:25:34] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:26:07] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[15-05-2018 10:26:07] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:29:01] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empext.mk
+[15-05-2018 10:29:01] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:29:22] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empExtCmr.mk
+[15-05-2018 10:29:22] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:29:37] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empExtCmr_AIX.mk
+[15-05-2018 10:29:37] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:29:55] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empExtEvalMultCmr.mk
+[15-05-2018 10:29:55] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:30:13] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empextSCB1.mk
+[15-05-2018 10:30:13] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:35:38] Error: No se pudo obtener el archivo fuente del servidor.
+[15-05-2018 10:35:38] Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\plastico\servidores\fuentes\plasticoO2.mk
+[15-05-2018 10:47:33] Error: No se pudo obtener el archivo fuente del servidor.
+[15-05-2018 10:47:33] Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-REDF\cliente\servidores\fuentes\cliEnrolamientoO2.mk
+[15-05-2018 10:51:12] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 10:51:12] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:51:12] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 10:51:12] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:52:37] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 10:52:37] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:52:37] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 10:52:37] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:52:57] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 10:52:57] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:52:57] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 10:52:57] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:53:54] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 10:53:54] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:53:54] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 10:53:54] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:54:02] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 10:54:02] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:54:02] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 10:54:02] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:59:09] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 10:59:09] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:59:18] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 10:59:18] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:59:18] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 10:59:18] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 10:59:45] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 10:59:45] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:02:49] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\hipoteca\servidores\fuentes\hipotecario.mk
+[15-05-2018 11:02:49] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:03:20] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[15-05-2018 11:03:20] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:06:10] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empext.mk
+[15-05-2018 11:06:10] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:06:29] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empExtCmr.mk
+[15-05-2018 11:06:29] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:06:36] Error: No se pudo obtener el archivo fuente del servidor.
+[15-05-2018 11:06:36] Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empExtCmrO2.mk
+[15-05-2018 11:06:43] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empExtCmr_AIX.mk
+[15-05-2018 11:06:43] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:07:00] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empExtEvalMultCmr.mk
+[15-05-2018 11:07:00] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:07:13] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empextSCB1.mk
+[15-05-2018 11:07:13] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 11:12:10] Error: No se pudo obtener el archivo fuente del servidor.
+[15-05-2018 11:12:10] Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-REDF\plastico\servidores\fuentes\plasticoO2.mk
+[15-05-2018 11:18:12] Fin del proceso de parseo de fuentes.
+[15-05-2018 12:26:35] Inicia el proceso de parseo de fuentes.
+[15-05-2018 12:29:05] Inicia el proceso de parseo de fuentes.
+[15-05-2018 12:44:04] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 12:44:04] java.lang.ArrayIndexOutOfBoundsException: 1
+[15-05-2018 12:44:07] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 12:44:07] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:44:13] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 12:44:13] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:44:13] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 12:44:13] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:44:31] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 12:44:31] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:44:33] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 12:44:33] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:44:51] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[15-05-2018 12:44:51] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:44:53] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[15-05-2018 12:44:53] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:47:12] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecario.mk
+[15-05-2018 12:47:12] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:48:26] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[15-05-2018 12:48:26] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:52:11] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empext.mk
+[15-05-2018 12:52:11] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:52:30] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empExtCmr.mk
+[15-05-2018 12:52:30] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 12:52:43] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empextSCB1.mk
+[15-05-2018 12:52:43] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:08:26] Error: No se pudo obtener el archivo fuente del servidor.
+[15-05-2018 13:08:26] Archivo Make en proceso: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\cliente\servidores\fuentes\cliEnrolamientoO2.mk
+[15-05-2018 13:12:24] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 13:12:24] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:12:24] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 13:12:24] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:13:53] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 13:13:53] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:13:53] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 13:13:53] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:14:20] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 13:14:20] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:14:20] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 13:14:20] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:15:21] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 13:15:21] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:15:21] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 13:15:21] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:15:30] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 13:15:30] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:15:30] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 13:15:30] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 13:19:11] Inicia el proceso de parseo de fuentes.
+[15-05-2018 13:27:36] Inicia el proceso de parseo de fuentes.
+[15-05-2018 13:36:23] Fin del proceso de parseo de fuentes.
+[15-05-2018 15:25:31] Inicia el proceso de parseo de fuentes.
+[15-05-2018 15:36:58] Inicia el proceso de parseo de fuentes.
+[15-05-2018 15:38:03] Inicia el proceso de parseo de fuentes.
+[15-05-2018 15:46:15] Inicia el proceso de parseo de fuentes.
+[15-05-2018 15:47:05] Inicia el proceso de parseo de fuentes.
+[15-05-2018 15:57:19] Inicia el proceso de parseo de fuentes.
+[15-05-2018 15:58:21] Inicia el proceso de parseo de fuentes.
+[15-05-2018 16:12:56] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 16:12:56] java.lang.ArrayIndexOutOfBoundsException: 1
+[15-05-2018 16:12:59] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 16:12:59] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:13:04] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 16:13:04] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:13:04] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 16:13:04] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:13:21] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 16:13:21] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:13:23] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 16:13:23] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:13:40] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[15-05-2018 16:13:40] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:13:42] Error al procesar: D:\Fuentes\FuentesBFL\D-N\Evaluacion\TUXEDO\evaluacion\servidores\fuentes\evaluacionSolicitud.mk
+[15-05-2018 16:13:42] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:16:00] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecario.mk
+[15-05-2018 16:16:00] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:17:16] Error al procesar: D:\Fuentes\FuentesBFL\D-N\hipoteca\TUXEDO\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[15-05-2018 16:17:16] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:21:01] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empext.mk
+[15-05-2018 16:21:01] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:21:20] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empExtCmr.mk
+[15-05-2018 16:21:20] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:21:32] Error al procesar: D:\Fuentes\FuentesBFL\D-N\informacionComercial\TUXEDO\informacionComercial\servidores\fuentes\empextSCB1.mk
+[15-05-2018 16:21:32] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:39:38] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 16:39:38] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:39:38] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 16:39:38] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:40:55] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 16:40:55] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:40:55] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 16:40:55] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:41:23] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 16:41:23] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:41:23] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 16:41:23] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:42:15] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 16:42:15] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:42:15] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 16:42:15] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:42:23] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 16:42:23] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:42:23] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 16:42:23] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:47:44] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 16:47:44] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:47:53] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 16:47:53] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:47:53] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 16:47:53] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:48:27] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 16:48:27] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:51:41] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\hipoteca\servidores\fuentes\hipotecario.mk
+[15-05-2018 16:51:41] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:52:13] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[15-05-2018 16:52:13] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:54:56] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empext.mk
+[15-05-2018 16:54:56] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:55:15] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empExtCmr.mk
+[15-05-2018 16:55:15] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:55:29] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empExtCmr_AIX.mk
+[15-05-2018 16:55:29] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:55:46] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empExtEvalMultCmr.mk
+[15-05-2018 16:55:46] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 16:55:59] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-IBANKING\informacionComercial\servidores\fuentes\empextSCB1.mk
+[15-05-2018 16:55:59] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:14:32] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 17:14:32] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:14:32] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoCajaFcc.mk
+[15-05-2018 17:14:32] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:15:58] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 17:15:58] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:15:58] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeuda.mk
+[15-05-2018 17:15:58] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:16:29] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 17:16:29] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:16:29] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoDeudaFcc.mk
+[15-05-2018 17:16:29] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:17:24] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 17:17:24] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:17:24] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUniv.mk
+[15-05-2018 17:17:24] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:17:32] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 17:17:32] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:17:32] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\credito\servidores\fuentes\creditoUnivFcc.mk
+[15-05-2018 17:17:32] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:22:38] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacion.mk
+[15-05-2018 17:22:38] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:22:47] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 17:22:47] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:22:47] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacionEspontaneo.mk
+[15-05-2018 17:22:47] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:23:14] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\evaluacion\servidores\fuentes\evaluacionMasiva.mk
+[15-05-2018 17:23:14] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:26:16] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\hipoteca\servidores\fuentes\hipotecario.mk
+[15-05-2018 17:26:16] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:26:47] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\hipoteca\servidores\fuentes\hipotecarioOtorgamiento.mk
+[15-05-2018 17:26:47] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:29:27] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empext.mk
+[15-05-2018 17:29:27] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:29:47] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empExtCmr.mk
+[15-05-2018 17:29:47] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:30:00] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empExtCmr_AIX.mk
+[15-05-2018 17:30:00] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:30:17] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empExtEvalMultCmr.mk
+[15-05-2018 17:30:17] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:30:30] Error al procesar: D:\Fuentes\FuentesBFL\TUXEDO-REDF\informacionComercial\servidores\fuentes\empextSCB1.mk
+[15-05-2018 17:30:30] java.lang.ArrayIndexOutOfBoundsException
+[15-05-2018 17:41:13] Fin del proceso de parseo de fuentes.
+[17-05-2018 09:51:34] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:00:38] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:01:48] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:05:53] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:06:08] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:06:25] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:06:38] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:21:42] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:21:57] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:22:59] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:23:13] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:25:12] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:25:27] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:28:02] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:28:16] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:30:03] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:30:16] Fin del proceso de parseo de fuentes.
+[17-05-2018 10:33:30] Inicia el proceso de parseo de fuentes.
+[17-05-2018 10:43:18] Inicia el proceso de parseo de fuentes.
+[17-05-2018 11:11:53] Inicia el proceso de parseo de fuentes.
+[17-05-2018 13:57:34] Inicia el proceso de parseo de fuentes.
+[17-05-2018 13:58:40] Inicia el proceso de parseo de fuentes.
+[17-05-2018 13:59:56] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:00:56] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:01:24] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:01:48] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:02:25] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:03:38] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:04:44] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:05:51] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:39:43] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:42:51] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:43:28] Fin del proceso de parseo de fuentes.
+[17-05-2018 14:45:24] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:46:05] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:46:38] Fin del proceso de parseo de fuentes.
+[17-05-2018 14:47:00] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:47:37] Fin del proceso de parseo de fuentes.
+[17-05-2018 14:49:37] Inicia el proceso de parseo de fuentes.
+[17-05-2018 14:50:14] Fin del proceso de parseo de fuentes.
+[17-05-2018 15:00:10] Inicia el proceso de parseo de fuentes.
+[17-05-2018 15:00:43] Fin del proceso de parseo de fuentes.
+[17-05-2018 15:01:43] Inicia el proceso de parseo de fuentes.
+[17-05-2018 15:02:27] Fin del proceso de parseo de fuentes.
+[17-05-2018 15:04:34] Inicia el proceso de parseo de fuentes.
+[17-05-2018 15:05:40] Fin del proceso de parseo de fuentes.
+[17-05-2018 15:17:21] Inicia el proceso de parseo de fuentes.
+[17-05-2018 15:17:59] Fin del proceso de parseo de fuentes.
+[17-05-2018 15:51:13] Inicia el proceso de parseo de fuentes.
+[17-05-2018 15:51:52] Fin del proceso de parseo de fuentes.
+[17-05-2018 15:52:22] Inicia el proceso de parseo de fuentes.
+[17-05-2018 17:46:39] Fin del proceso de parseo de fuentes.
+[18-05-2018 09:39:19] Inicia el proceso de parseo de fuentes.
+[18-05-2018 09:41:22] Inicia el proceso de parseo de fuentes.
+[18-05-2018 09:48:54] Inicia el proceso de parseo de fuentes.
+[18-05-2018 09:49:58] Inicia el proceso de parseo de fuentes.
+[18-05-2018 09:55:12] Inicia el proceso de parseo de fuentes.
+[18-05-2018 09:58:05] Inicia el proceso de parseo de fuentes.
+[18-05-2018 10:01:05] Inicia el proceso de parseo de fuentes.
+[18-05-2018 12:04:55] Fin del proceso de parseo de fuentes.
+[18-05-2018 12:23:33] Inicia el proceso de parseo de fuentes.
+[18-05-2018 12:23:42] Fin del proceso de parseo de fuentes.
+[18-05-2018 12:26:44] Inicia el proceso de parseo de fuentes.
+[18-05-2018 12:26:52] Fin del proceso de parseo de fuentes.
+[18-05-2018 13:44:19] Inicia el proceso de parseo de fuentes.
+[18-05-2018 13:45:36] Fin del proceso de parseo de fuentes.
+[18-05-2018 13:45:47] Inicia el proceso de parseo de fuentes.
+[18-05-2018 13:47:06] Fin del proceso de parseo de fuentes.
+[18-05-2018 13:54:36] Inicia el proceso de parseo de fuentes.
+[18-05-2018 13:55:45] Fin del proceso de parseo de fuentes.
+[18-05-2018 13:56:05] Inicia el proceso de parseo de fuentes.
+[18-05-2018 13:57:06] Inicia el proceso de parseo de fuentes.
+[18-05-2018 13:58:19] Fin del proceso de parseo de fuentes.
+[18-05-2018 13:58:36] Inicia el proceso de parseo de fuentes.
+[18-05-2018 13:59:52] Fin del proceso de parseo de fuentes.
+[18-05-2018 14:03:53] Inicia el proceso de parseo de fuentes.
+[18-05-2018 14:07:30] Inicia el proceso de parseo de fuentes.
+[18-05-2018 14:09:02] Fin del proceso de parseo de fuentes.
+[18-05-2018 14:16:22] Inicia el proceso de parseo de fuentes.
+[18-05-2018 14:26:10] Inicia el proceso de parseo de fuentes.
+[18-05-2018 14:27:21] Fin del proceso de parseo de fuentes.
+[18-05-2018 14:39:32] Inicia el proceso de parseo de fuentes.
+[18-05-2018 16:35:55] Fin del proceso de parseo de fuentes.
+[22-05-2018 09:33:47] Inicia el proceso de parseo de fuentes.
+[22-05-2018 11:49:02] Fin del proceso de parseo de fuentes.
+[22-05-2018 12:13:48] Inicia el proceso de parseo de fuentes.
+[22-05-2018 12:57:43] Fin del proceso de parseo de fuentes.
+[22-05-2018 13:33:32] Inicia el proceso de parseo de fuentes.
+[22-05-2018 13:34:13] Inicia el proceso de parseo de fuentes.
+[22-05-2018 13:41:18] Inicia el proceso de parseo de fuentes.
+[22-05-2018 14:23:25] Fin del proceso de parseo de fuentes.
+[23-05-2018 16:13:16] Inicia el proceso de parseo de fuentes.
+[23-05-2018 16:56:21] Fin del proceso de parseo de fuentes.
+[30-05-2018 14:22:29] Inicia el proceso de parseo de fuentes.
+[30-05-2018 15:10:08] Fin del proceso de parseo de fuentes.
+[31-05-2018 09:39:44] Inicia el proceso de parseo de fuentes.
+[31-05-2018 10:23:59] Fin del proceso de parseo de fuentes.
+[31-05-2018 10:36:18] Inicia el proceso de parseo de fuentes.
+[31-05-2018 11:23:24] Fin del proceso de parseo de fuentes.
+[01-06-2018 11:07:43] Inicia el proceso de parseo de fuentes.
+[01-06-2018 11:51:11] Fin del proceso de parseo de fuentes.
+[01-06-2018 14:58:21] Inicia el proceso de parseo de fuentes.
+[01-06-2018 15:40:02] Fin del proceso de parseo de fuentes.
+[05-06-2018 12:09:40] Inicia el proceso de parseo de fuentes.
+[05-06-2018 12:51:48] Fin del proceso de parseo de fuentes.
+[07-06-2018 17:10:14] Inicia el proceso de parseo de fuentes.

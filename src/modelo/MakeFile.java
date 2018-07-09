@@ -16,7 +16,7 @@ public class MakeFile {
     private String nombreServer;
     private File archivoFuenteServidor;
     boolean generaServidor = false;
-    
+    public File archivoMake;
 
     public MakeFile() {
     }
