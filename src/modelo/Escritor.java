@@ -5,20 +5,32 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import modelo.servidor.ServidorTux;
+import vista.Main;
 
 public class Escritor {
 
-    public static String makeServidor = "interfaces\\make-servidor.csv";
-    public static String servidorDependencias = "interfaces\\servidor-dependencias.csv";
-    public static String servidorServicios = "interfaces\\servidor-servicios.csv";
-    public static String servicioFuncion = "interfaces\\servicio-funcion.csv";
-    public static String funcionFuncion = "interfaces\\funcion-funcion.csv";
-    public static String servicioAlias = "interfaces\\servicio-alias.csv";
-    public static String dependenciaFuncionConsumo = "interfaces\\dependencia-funcion-consumo.csv";
-    public static String dependenciaFuncionFuncion = "interfaces\\dependencia-funcion-funcion.csv";
-    public static String dependenciaFuncion = "interfaces\\dependencia-funcion.csv";
-    public static String errores = "interfaces\\errores.csv";
-    public static String funcionServicioCore = "interfaces\\funcion-core.csv";
+    //public static String makeServidor = "interfaces\\make-servidor.csv";
+    public static String makeServidor = Main.PROPERTIES.getProperty("interfaz.makeservidor");
+    //public static String servidorDependencias = "interfaces\\servidor-dependencias.csv";
+    public static String servidorDependencias = Main.PROPERTIES.getProperty("interfaz.servidordependencia");
+    //public static String servidorServicios = "interfaces\\servidor-servicios.csv";
+    public static String servidorServicios = Main.PROPERTIES.getProperty("interfaz.servidorservicios");
+    //public static String servicioFuncion = "interfaces\\servicio-funcion.csv";
+    public static String servicioFuncion = Main.PROPERTIES.getProperty("interfaz.serviciofuncion");
+    //public static String funcionFuncion = "interfaces\\funcion-funcion.csv";
+    public static String funcionFuncion = Main.PROPERTIES.getProperty("interfaz.funcionfuncion");
+    //public static String servicioAlias = "interfaces\\servicio-alias.csv";
+    public static String servicioAlias = Main.PROPERTIES.getProperty("interfaz.servicioalias");
+    //public static String dependenciaFuncionConsumo = "interfaces\\dependencia-funcion-consumo.csv";
+    public static String dependenciaFuncionConsumo = Main.PROPERTIES.getProperty("interfaz.dependenciafuncionconsumo");
+    //public static String dependenciaFuncionFuncion = "interfaces\\dependencia-funcion-funcion.csv";
+    public static String dependenciaFuncionFuncion = Main.PROPERTIES.getProperty("interfaz.dependenciafuncionfuncion");
+    //public static String dependenciaFuncion = "interfaces\\dependencia-funcion.csv";
+    public static String dependenciaFuncion = Main.PROPERTIES.getProperty("interfaz.dependenciafuncion");
+    //public static String errores = "interfaces\\errores.csv";
+    public static String errores = Main.PROPERTIES.getProperty("interfaz.errores");
+    //public static String funcionServicioCore = "interfaces\\funcion-core.csv";
+    public static String funcionServicioCore = Main.PROPERTIES.getProperty("interfaz.funcionserviciocore");
 
     public static void iniciarInterfaces() {
 	try {

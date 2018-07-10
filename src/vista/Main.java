@@ -1,8 +1,11 @@
 package vista;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 import logger.Logger;
 import modelo.Parametros;
 import org.eclipse.core.runtime.CoreException;
@@ -14,9 +17,25 @@ import org.eclipse.core.runtime.CoreException;
 public class Main {
 
     private static final String SEP = modelo.Parametros.SEP;
+    public static Properties PROPERTIES;
 
     public static void main(String[] args) throws CoreException {
+	
+	//Cargar archivo properties con rutas
+	Properties prop = new Properties();
+	InputStream input = null;
+	try{
+	    input = new FileInputStream("config.properties");
+	    prop.load(input);
+	    PROPERTIES = prop;
+	}catch (IOException ex) {
+	    System.out.println("No se puede cargar el archivo de propiedades.");
+	    System.out.println(ex);
+	    System.exit(1);
+	}
+	
 	modelo.Escritor.iniciarInterfaces();
+	
         if (procesaArgumentos(args) == 0) {
 	    Logger logger = new Logger("log.txt");
             Buscador b = new Buscador();
@@ -24,6 +43,7 @@ public class Main {
             b.buscar(new File(args[0]));
 	    logger.log("Fin del proceso de parseo de fuentes.");
         }
+	
     }
 
     private static int procesaArgumentos(String[] args) {
