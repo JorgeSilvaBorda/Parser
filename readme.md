@@ -5,7 +5,7 @@ Parser levantamiento arquitectura
 Aplicación de análisis de código fuente para analizar la estructura de las aplicaciones en ejecución de Banco Falabella.
 
 ----------
-Versión actual: 0.0.2-beta
+Versión actual: 0.0.4-beta
 
 
 Características:
